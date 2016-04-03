@@ -1,0 +1,1145 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/nodejs',
+1 verbose cli   '/usr/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'grunt-contrib-connect' ]
+2 info using npm@1.3.10
+3 info using node@v0.10.25
+4 warn package.json notix-hybrid@0.1.0 No description
+5 warn package.json notix-hybrid@0.1.0 No README data
+6 verbose readDependencies using package.json deps
+7 verbose cache add [ 'grunt-contrib-connect', null ]
+8 verbose cache add name=undefined spec="grunt-contrib-connect" args=["grunt-contrib-connect",null]
+9 verbose parsed url { protocol: null,
+9 verbose parsed url   slashes: null,
+9 verbose parsed url   auth: null,
+9 verbose parsed url   host: null,
+9 verbose parsed url   port: null,
+9 verbose parsed url   hostname: null,
+9 verbose parsed url   hash: null,
+9 verbose parsed url   search: null,
+9 verbose parsed url   query: null,
+9 verbose parsed url   pathname: 'grunt-contrib-connect',
+9 verbose parsed url   path: 'grunt-contrib-connect',
+9 verbose parsed url   href: 'grunt-contrib-connect' }
+10 silly lockFile a0cb9c83-grunt-contrib-connect grunt-contrib-connect
+11 verbose lock grunt-contrib-connect /home/preetesh/.npm/a0cb9c83-grunt-contrib-connect.lock
+12 silly lockFile a0cb9c83-grunt-contrib-connect grunt-contrib-connect
+13 silly lockFile a0cb9c83-grunt-contrib-connect grunt-contrib-connect
+14 verbose addNamed [ 'grunt-contrib-connect', '' ]
+15 verbose addNamed [ null, '*' ]
+16 silly lockFile 8d414d07-grunt-contrib-connect grunt-contrib-connect@
+17 verbose lock grunt-contrib-connect@ /home/preetesh/.npm/8d414d07-grunt-contrib-connect.lock
+18 silly addNameRange { name: 'grunt-contrib-connect', range: '*', hasData: false }
+19 verbose url raw grunt-contrib-connect
+20 verbose url resolving [ 'https://registry.npmjs.org/', './grunt-contrib-connect' ]
+21 verbose url resolved https://registry.npmjs.org/grunt-contrib-connect
+22 info trying registry request attempt 1 at 21:12:48
+23 verbose etag "711UVYP2CAXD0FJWM8G0LCMT8"
+24 http GET https://registry.npmjs.org/grunt-contrib-connect
+25 http 304 https://registry.npmjs.org/grunt-contrib-connect
+26 silly registry.get cb [ 304,
+26 silly registry.get   { date: 'Sun, 03 Apr 2016 15:42:49 GMT',
+26 silly registry.get     via: '1.1 varnish',
+26 silly registry.get     'cache-control': 'max-age=300',
+26 silly registry.get     etag: '"711UVYP2CAXD0FJWM8G0LCMT8"',
+26 silly registry.get     age: '47',
+26 silly registry.get     connection: 'keep-alive',
+26 silly registry.get     'x-served-by': 'cache-sin6927-SIN',
+26 silly registry.get     'x-cache': 'HIT',
+26 silly registry.get     'x-cache-hits': '1',
+26 silly registry.get     'x-timer': 'S1459698169.348626,VS0,VE0',
+26 silly registry.get     vary: 'Accept' } ]
+27 verbose etag grunt-contrib-connect from cache
+28 silly addNameRange number 2 { name: 'grunt-contrib-connect', range: '*', hasData: true }
+29 silly addNameRange versions [ 'grunt-contrib-connect',
+29 silly addNameRange   [ '0.1.0',
+29 silly addNameRange     '0.1.1',
+29 silly addNameRange     '0.1.2',
+29 silly addNameRange     '0.2.0',
+29 silly addNameRange     '0.3.0',
+29 silly addNameRange     '0.4.0',
+29 silly addNameRange     '0.4.1',
+29 silly addNameRange     '0.4.2',
+29 silly addNameRange     '0.5.0',
+29 silly addNameRange     '0.6.0',
+29 silly addNameRange     '0.7.0',
+29 silly addNameRange     '0.7.1',
+29 silly addNameRange     '0.8.0',
+29 silly addNameRange     '0.9.0',
+29 silly addNameRange     '0.10.0',
+29 silly addNameRange     '0.10.1',
+29 silly addNameRange     '0.11.0',
+29 silly addNameRange     '0.11.1',
+29 silly addNameRange     '0.11.2',
+29 silly addNameRange     '1.0.0',
+29 silly addNameRange     '1.0.1',
+29 silly addNameRange     '0.1.1-rc6' ] ]
+30 verbose addNamed [ 'grunt-contrib-connect', '1.0.1' ]
+31 verbose addNamed [ '1.0.1', '1.0.1' ]
+32 silly lockFile 667fbd25-grunt-contrib-connect-1-0-1 grunt-contrib-connect@1.0.1
+33 verbose lock grunt-contrib-connect@1.0.1 /home/preetesh/.npm/667fbd25-grunt-contrib-connect-1-0-1.lock
+34 silly lockFile 667fbd25-grunt-contrib-connect-1-0-1 grunt-contrib-connect@1.0.1
+35 silly lockFile 667fbd25-grunt-contrib-connect-1-0-1 grunt-contrib-connect@1.0.1
+36 silly lockFile 8d414d07-grunt-contrib-connect grunt-contrib-connect@
+37 silly lockFile 8d414d07-grunt-contrib-connect grunt-contrib-connect@
+38 silly resolved [ { name: 'grunt-contrib-connect',
+38 silly resolved     description: 'Start a connect web server',
+38 silly resolved     version: '1.0.1',
+38 silly resolved     author: { name: 'Grunt Team', url: 'http://gruntjs.com/' },
+38 silly resolved     repository:
+38 silly resolved      { type: 'git',
+38 silly resolved        url: 'git://github.com/gruntjs/grunt-contrib-connect' },
+38 silly resolved     license: 'MIT',
+38 silly resolved     engines: { node: '>=0.10.0' },
+38 silly resolved     main: 'tasks/connect.js',
+38 silly resolved     scripts: { test: 'grunt test --verbose' },
+38 silly resolved     dependencies:
+38 silly resolved      { async: '^1.5.2',
+38 silly resolved        connect: '^3.4.0',
+38 silly resolved        'connect-livereload': '^0.5.0',
+38 silly resolved        http2: 'https://github.com/gruntjs/node-http2#fix-return-value',
+38 silly resolved        morgan: '^1.6.1',
+38 silly resolved        opn: '^4.0.0',
+38 silly resolved        portscanner: '^1.0.0',
+38 silly resolved        'serve-index': '^1.7.1',
+38 silly resolved        'serve-static': '^1.10.0' },
+38 silly resolved     devDependencies:
+38 silly resolved      { grunt: '^0.4.5',
+38 silly resolved        'grunt-cli': '^0.1.13',
+38 silly resolved        'grunt-contrib-internal': '^0.4.10',
+38 silly resolved        'grunt-contrib-jshint': '^1.0.0',
+38 silly resolved        'grunt-contrib-nodeunit': '^0.4.0' },
+38 silly resolved     peerDependencies: { grunt: '>=0.4.0' },
+38 silly resolved     keywords: [ 'gruntplugin', 'server', 'connect', 'http' ],
+38 silly resolved     files: [ 'tasks' ],
+38 silly resolved     appveyor_id: '3bp93hbs2rd5lwfd',
+38 silly resolved     readme: '# grunt-contrib-connect v1.0.1 [![Build Status: Linux](https://travis-ci.org/gruntjs/grunt-contrib-connect.svg?branch=master)](https://travis-ci.org/gruntjs/grunt-contrib-connect) [![Build Status: Windows](https://ci.appveyor.com/api/projects/status/3bp93hbs2rd5lwfd/branch/master?svg=true)](https://ci.appveyor.com/project/gruntjs/grunt-contrib-connect/branch/master)\n\n> Start a connect web server\n\n\n\n## Getting Started\n\nIf you haven\'t used [Grunt](http://gruntjs.com/) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to create a [Gruntfile](http://gruntjs.com/sample-gruntfile) as well as install and use Grunt plugins. Once you\'re familiar with that process, you may install this plugin with this command:\n\n```shell\nnpm install grunt-contrib-connect --save-dev\n```\n\nOnce the plugin has been installed, it may be enabled inside your Gruntfile with this line of JavaScript:\n\n```js\ngrunt.loadNpmTasks(\'grunt-contrib-connect\');\n```\n\n\n\n\n## Connect task\n_Run this task with the `grunt connect` command._\n\nNote that this server only runs as long as grunt is running. Once grunt\'s tasks have completed, the web server stops. This behavior can be changed with the [keepalive](#keepalive) option, and can be enabled ad-hoc by running the task like `grunt connect:keepalive`.\n\nThis task was designed to be used in conjunction with another task that is run immediately afterwards, like the [grunt-contrib-qunit plugin](https://github.com/gruntjs/grunt-contrib-qunit) `qunit` task.\n### Options\n\n#### port\nType: `Integer`  \nDefault: `8000`\n\nThe port on which the webserver will respond. The task will fail if the specified port is already in use (unless [useAvailablePort](#useavailableport) is set). You can use the special values `0` or `\'?\'` to use a system-assigned port.\n\n#### protocol\nType: `String`  \nDefault: `\'http\'`\n\nMay be `\'http\'`, `\'http2\'` or `\'https\'`.\n\n#### hostname\nType: `String`  \nDefault: `\'0.0.0.0\'`\n\nThe hostname on which the webserver can be accessed.\n\nSetting it to `\'*\'`, like \'`0.0.0.0`\', will make the server accessible from any **local** IPv4 address like  `\'127.0.0.1\'` and the IP assigned to an ethernet or wireless interface (like `\'192.168.0.x\'` or `\'10.0.0.x\'`). [More info](http://en.wikipedia.org/wiki/0.0.0.0)\n\nIf [`open`](#open) is set to `true`, the `hostname` setting will be used to generate the URL that is opened by the browser, defaulting to `localhost` if a wildcard hostname was specified.\n\n#### base\nType: `String` or `Array` or `Object`  \nDefault: `\'.\'`\n\n| Type     | Result                                                                                                                                           | Example                                              |\n| ---      | :---                                                                                                                                             | ---                                                  |\n| *String* | The base (or root) directory from which files will be served. Defaults to the project Gruntfile\'s directory.                                     | `\'public\'`                                           |\n| *Array*  | Array of `String` (or `Object`) bases to serve multiple directories. The last base given will be the [directory][] to become browse-able.        | `[\'public\',\'www-root\']`                              |\n| *Object* | Map containing `path` and `options` keys. `options` are passed on to the [serve-static](https://www.npmjs.com/package/serve-static) module. | `{ path: \'public\', options: { maxAge: 1000*60*5 } }` |\n\n\n#### directory\nType: `String`  \nDefault: `null`\n\nSet to the directory you wish to be browse-able. Used to override the `base` option browse-able directory.\n\nSee https://www.npmjs.com/package/serve-index for details.\n\n#### keepalive\nType: `Boolean`  \nDefault: `false`\n\nKeep the server alive indefinitely. Note that if this option is enabled, any tasks specified after this task will _never run_. By default, once grunt\'s tasks have completed, the web server stops. This option changes that behavior.\n\nThis option can also be enabled ad-hoc by running the task like `grunt connect:targetname:keepalive`\n\n#### debug\nType: `Boolean`  \nDefault: `false`\n\nSet the `debug` option to true to enable logging instead of using the `--debug` flag.\n\n#### livereload\nType: `Boolean` or `Number`  \nDefault: `false`\n\nSet to `true` or a port number to inject a live reload script tag into your page using [connect-livereload](https://github.com/intesso/connect-livereload).\n\n*This does not perform live reloading. It is intended to be used in tandem with grunt-contrib-watch or another task that will trigger a live reload server upon files changing.*\n\n#### open\nType: `Boolean` or `String` or `Object`  \nDefault: `false`\n\nOpen the served page in your default browser.\n\nThis can be one of the following:\n\n- Specifying `true` opens the default server URL (generated from the [`protocol`](#protocol), [`hostname`](#hostname) and [`port`](#port) settings)\n- Specifying a URL opens that URL\n- Specify an object with the following keys to configure [open](https://www.npmjs.com/package/open) directly:\n\n\t```js\n\t{\n\t  target: \'http://localhost:8000\', // target url to open\n\t  appName: \'open\', // name of the app that opens, ie: open, start, xdg-open\n\t  callback: function() {} // called when the app has opened\n\t}\n\t```\n\n#### useAvailablePort\nType: `Boolean`  \nDefault: `false`\n\nIf `true` the task will look for the next available port after the set `port` option.\n\n#### onCreateServer\nType: `Function` or `Array`  \nDefault: `null`\n\nA function to be called after the server object is created, to allow integrating libraries that need access to connect\'s server object. A Socket.IO example:\n\n```js\ngrunt.initConfig({\n  connect: {\n    server: {\n      options: {\n        port: 8000,\n        hostname: \'*\',\n        onCreateServer: function(server, connect, options) {\n          var io = require(\'socket.io\').listen(server);\n          io.sockets.on(\'connection\', function(socket) {\n            // do something with socket\n          });\n        }\n      }\n    }\n  }\n});\n```\n\n#### middleware\nType: `Function` or `Array`  \nDefault: `Array` of connect middlewares that use `options.base` for static files and directory browsing\n\nAs an `Array`:\n\n```js\ngrunt.initConfig({\n  connect: {\n    server: {\n      options: {\n        middleware: [\n          function myMiddleware(req, res, next) {\n            res.end(\'Hello, world!\');\n          }\n        ],\n      },\n    },\n  },\n});\n```\n\nAs a `function`:\n\n```js\ngrunt.initConfig({\n  connect: {\n    server: {\n      options: {\n        middleware: function(connect, options, middlewares) {\n          // inject a custom middleware into the array of default middlewares\n          middlewares.unshift(function(req, res, next) {\n            if (req.url !== \'/hello/world\') return next();\n\n            res.end(\'Hello, world from port #\' + options.port + \'!\');\n          });\n\n          return middlewares;\n        },\n      },\n    },\n  },\n});\n```\n\nLets you add in your own Connect middlewares. This option expects a function that returns an array of middlewares. See the [project Gruntfile][] and [project unit tests][] for a usage example.\n\n[project Gruntfile]: Gruntfile.js\n[project unit tests]: test/connect_test.js\n\n### Usage examples\n\n#### Basic Use\nIn this example, `grunt connect` (or more verbosely, `grunt connect:server`) will start a static web server at `http://localhost:9001/`, with its base path set to the `www-root` directory relative to the gruntfile, and any tasks run afterwards will be able to access it.\n\n```js\n// Project configuration.\ngrunt.initConfig({\n  connect: {\n    server: {\n      options: {\n        port: 9001,\n        base: \'www-root\'\n      }\n    }\n  }\n});\n```\n\nIf you want your web server to use the default options, just omit the `options` object. You still need to specify a target (`uses_defaults` in this example), but the target\'s configuration object can otherwise be empty or nonexistent. In this example, `grunt connect` (or more verbosely, `grunt connect:uses_defaults`) will start a static web server using the default options.\n\n```js\n// Project configuration.\ngrunt.initConfig({\n  connect: {\n    uses_defaults: {}\n  }\n});\n```\n\n#### Multiple Servers\nYou can specify multiple servers to be run alone or simultaneously by creating a target for each server. In this example, running either `grunt connect:site1` or `grunt connect:site2` will  start the appropriate web server, but running `grunt connect` will run _both_. Note that any server for which the [keepalive](#keepalive) option is specified will prevent _any_ task or target from running after it.\n\n```js\n// Project configuration.\ngrunt.initConfig({\n  connect: {\n    site1: {\n      options: {\n        port: 9000,\n        base: \'www-roots/site1\'\n      }\n    },\n    site2: {\n      options: {\n        port: 9001,\n        base: \'www-roots/site2\'\n      }\n    }\n  }\n});\n```\n\n#### Static Options\n\nOptions for the serve-static module. See [serve-static](https://www.npmjs.com/package/serve-static):\n\n```js\ngrunt.initConfig({\n  connect: {\n    server: {\n      options: {\n        port: 8000,\n        base: {\n          path: \'www-root\',\n          options: {\n            index: \'somedoc.html\',\n            maxAge: 300000\n          }\n        }\n      }\n    }\n  }\n});\n```\n\n\n\n#### \n\n#### Roll Your Own\nLike the [Basic Use](#basic-use) example, this example will start a static web server at `http://localhost:9001/`, with its base path set to the `www-root` directory relative to the gruntfile. Unlike the other example, this is done by creating a brand new task. in fact, this plugin isn\'t even installed!\n\n```js\n// Project configuration.\ngrunt.initConfig({ /* Nothing needed here! */ });\n\n// After running "npm install connect serve-static --save-dev" to add connect as a dev\n// dependency of your project, you can require it in your gruntfile with:\nvar connect = require(\'connect\');\nvar serveStatic = require(\'serve-static\');\nconnect(serveStatic(\'www-root\')).listen(9001);\n\n// Now you can define a "connect" task that starts a webserver, using the\n// connect lib, with whatever options and configuration you need:\ngrunt.registerTask(\'connect\', \'Start a custom static web server.\', function() {\n  grunt.log.writeln(\'Starting static web server in "www-root" on port 9001.\');\n  connect(serveStatic(\'www-root\')).listen(9001);\n});\n```\n\n#### Support for HTTPS / HTTP2\n\nA default certificate authority, certificate and key file are provided and pre-\nconfigured for use when `protocol` has been set to `https`.\n\nNOTE: No passphrase set for the certificate.\nIf you are getting warnings in Google Chrome, add \'server.crt\' (from \'node_modules/tasks/certs\')\nto your keychain.\nIn OS X, after you add \'server.crt\', right click on the certificate,\nselect \'Get Info\' - \'Trust\' - \'Always Trust\', close window, restart Chrome.\n\nFor HTTPS / HTTP2 livereload with [grunt-contrib-watch](https://github.com/gruntjs/grunt-contrib-watch) \n see the last example [here](https://github.com/gruntjs/grunt-contrib-watch#optionslivereload).\n\n###### Advanced HTTPS / HTTP2 config\n\nIf the default certificate setup is unsuitable for your environment, OpenSSL\ncan be used to create a set of self-signed certificates with a local ca root.\n\n```shell\n### Create ca.key, use a password phrase when asked\n### When asked \'Common Name (e.g. server FQDN or YOUR name) []:\' use your hostname, i.e \'mysite.dev\'\nopenssl genrsa -des3 -out ca.key 1024\nopenssl req -new -key ca.key -out ca.csr\nopenssl x509 -req -days 365 -in ca.csr -out ca.crt -signkey ca.key\n\n### Create server certificate\nopenssl genrsa -des3 -out server.key 1024\nopenssl req -new -key server.key -out server.csr\n\n### Remove password from the certificate\ncp server.key server.key.org\nopenssl rsa -in server.key.org -out server.key\n\n### Generate self-siged certificate\nopenssl x509 -req -days 365 -in server.csr -signkey server.key -out server.crt\n```\n\nFor more details on the various options that can be set when configuring SSL,\nplease see the Node documentation for [TLS][].\n\nGrunt configuration would become\n\n```js\n// Project configuration.\ngrunt.initConfig({\n  connect: {\n    server: {\n      options: {\n        protocol: \'https\', // or \'http2\'\n        port: 8443,\n        key: grunt.file.read(\'server.key\').toString(),\n        cert: grunt.file.read(\'server.crt\').toString(),\n        ca: grunt.file.read(\'ca.crt\').toString()\n      },\n    },\n  },\n});\n```\n\n[TLS]: http://nodejs.org/api/tls.html#tls_tls_createserver_options_secureconnectionlistener\n\n#### Grunt Events\nThe connect plugin will emit a grunt event, `connect.{taskName}.listening`, once the server has started. You can listen for this event to run things against a keepalive server, for example:\n\n```js\ngrunt.registerTask(\'jasmine-server\', \'start web server for jasmine tests in browser\', function() {\n  grunt.task.run(\'jasmine:tests:build\');\n\n  grunt.event.once(\'connect.tests.listening\', function(host, port) {\n    var specRunnerUrl = \'http://\' + host + \':\' + port + \'/_SpecRunner.html\';\n    grunt.log.writeln(\'Jasmine specs available at: \' + specRunnerUrl);\n    require(\'open\')(specRunnerUrl);\n  });\n\n  grunt.task.run(\'connect:tests:keepalive\');\n});\n```\n\n\n## Release History\n\n * 2016-03-22   v1.0.1   Fixed dependencies behind corporate proxy server.\n * 2016-03-04   v1.0.0   Use predefined logger format with colored http status. Update deps and docs. HTTP2 support. Other fixes.\n * 2015-08-03   v0.11.2   Documentation fixes.\n * 2015-08-01   v0.11.1   Fixes debug logging.\n * 2015-07-30   v0.11.0   Update to connect 3.\n * 2015-04-03   v0.10.1   Fixes npm corruption issue.\n * 2015-04-03   v0.10.0   Node.js 0.12 fixes. Doc updates. Fixes port finding. Other fixes.\n * 2014-11-07   v0.9.0   Adds routable middleware. Switch to `opn` as it fixes some Linux issues. Add support for `connect.static` instance options.\n * 2014-06-09   v0.8.0   Update connect and connect-livereload.\n * 2014-02-27   v0.7.1   Fixes issue with the \'*\' `hostname` option.\n * 2014-02-18   v0.7.0   Update connect to ~2.13.0. Default hostname switched to `0.0.0.0`. Modified `options.middleware` to accept an array or a function.\n * 2013-12-29   v0.6.0   Open `options.hostname` if provided. Update connect-livereload to ~0.3.0. Update connect to ~2.12.0. Use well-formed SSL certificates. Support all options of open. Make directory browseable when base is a string.\n * 2013-09-05   v0.5.0   Add `open` option.\n * 2013-09-05   v0.4.2   Un-normalize `options.base` as it should be a string or an array as the user has set. Fix setting target `hostname` option.\n * 2013-09-02   v0.4.1   Browse-able directory is the last item supplied to bases. Added directory option to override browse-able directory.\n * 2013-09-01   v0.4.0   Fix logging of which server address. Ability to set multiple bases. Event emitted when server starts listening. Support for HTTPS. `debug` option added to display debug logging like the `--debug` flag. `livereload` option added to inject a livereload snippet into the page.\n * 2013-04-10   v0.3.0   Add ability to listen on system-assigned port.\n * 2013-03-07   v0.2.0   Upgrade connect dependency.\n * 2013-02-17   v0.1.2   Ensure Gruntfile.js is included on npm.\n * 2013-02-15   v0.1.1   First official release for Grunt 0.4.0.\n * 2013-01-18   v0.1.1rc6   Updating grunt/gruntplugin dependencies to rc6. Changing in-development grunt/gruntplugin dependency versions from tilde version ranges to specific versions.\n * 2013-01-09   v0.1.1rc5   Updating to work with grunt v0.4.0rc5.\n * 2012-11-01   v0.1.0   Work in progress, not yet officially released.\n\n---\n\nTask submitted by ["Cowboy" Ben Alman](http://benalman.com)\n\n*This file was generated on Tue Mar 22 2016 10:33:53.*\n',
+38 silly resolved     readmeFilename: 'README.md',
+38 silly resolved     bugs: { url: 'https://github.com/gruntjs/grunt-contrib-connect/issues' },
+38 silly resolved     _id: 'grunt-contrib-connect@1.0.1',
+38 silly resolved     _from: 'grunt-contrib-connect@' } ]
+39 info install grunt-contrib-connect@1.0.1 into /home/preetesh/Desktop/notix-hybrid
+40 info installOne grunt-contrib-connect@1.0.1
+41 info /home/preetesh/Desktop/notix-hybrid/node_modules/grunt-contrib-connect unbuild
+42 verbose tar unpack /home/preetesh/.npm/grunt-contrib-connect/1.0.1/package.tgz
+43 silly lockFile 6ef689cd-de-modules-grunt-contrib-connect tar:///home/preetesh/Desktop/notix-hybrid/node_modules/grunt-contrib-connect
+44 verbose lock tar:///home/preetesh/Desktop/notix-hybrid/node_modules/grunt-contrib-connect /home/preetesh/.npm/6ef689cd-de-modules-grunt-contrib-connect.lock
+45 silly lockFile 2a21acd9-ontrib-connect-1-0-1-package-tgz tar:///home/preetesh/.npm/grunt-contrib-connect/1.0.1/package.tgz
+46 verbose lock tar:///home/preetesh/.npm/grunt-contrib-connect/1.0.1/package.tgz /home/preetesh/.npm/2a21acd9-ontrib-connect-1-0-1-package-tgz.lock
+47 silly gunzTarPerm modes [ '755', '644' ]
+48 silly gunzTarPerm extractEntry package.json
+49 silly gunzTarPerm extractEntry README.md
+50 silly gunzTarPerm extractEntry tasks/connect.js
+51 silly gunzTarPerm extractEntry tasks/certs/ca.crt
+52 silly gunzTarPerm extractEntry tasks/certs/ca.csr
+53 silly gunzTarPerm extractEntry tasks/certs/ca.key
+54 silly gunzTarPerm extractEntry tasks/certs/ca.srl
+55 silly gunzTarPerm extractEntry tasks/certs/server.crt
+56 silly gunzTarPerm extractEntry tasks/certs/server.csr
+57 silly gunzTarPerm extractEntry tasks/certs/server.key
+58 silly gunzTarPerm extractEntry tasks/certs/server.key.org
+59 silly lockFile 6ef689cd-de-modules-grunt-contrib-connect tar:///home/preetesh/Desktop/notix-hybrid/node_modules/grunt-contrib-connect
+60 silly lockFile 6ef689cd-de-modules-grunt-contrib-connect tar:///home/preetesh/Desktop/notix-hybrid/node_modules/grunt-contrib-connect
+61 silly lockFile 2a21acd9-ontrib-connect-1-0-1-package-tgz tar:///home/preetesh/.npm/grunt-contrib-connect/1.0.1/package.tgz
+62 silly lockFile 2a21acd9-ontrib-connect-1-0-1-package-tgz tar:///home/preetesh/.npm/grunt-contrib-connect/1.0.1/package.tgz
+63 info preinstall grunt-contrib-connect@1.0.1
+64 verbose readDependencies using package.json deps
+65 verbose readDependencies using package.json deps
+66 verbose cache add [ 'async@^1.5.2', null ]
+67 verbose cache add name=undefined spec="async@^1.5.2" args=["async@^1.5.2",null]
+68 verbose parsed url { protocol: null,
+68 verbose parsed url   slashes: null,
+68 verbose parsed url   auth: null,
+68 verbose parsed url   host: null,
+68 verbose parsed url   port: null,
+68 verbose parsed url   hostname: null,
+68 verbose parsed url   hash: null,
+68 verbose parsed url   search: null,
+68 verbose parsed url   query: null,
+68 verbose parsed url   pathname: 'async@^1.5.2',
+68 verbose parsed url   path: 'async@^1.5.2',
+68 verbose parsed url   href: 'async@^1.5.2' }
+69 verbose cache add name="async" spec="^1.5.2" args=["async","^1.5.2"]
+70 verbose parsed url { protocol: null,
+70 verbose parsed url   slashes: null,
+70 verbose parsed url   auth: null,
+70 verbose parsed url   host: null,
+70 verbose parsed url   port: null,
+70 verbose parsed url   hostname: null,
+70 verbose parsed url   hash: null,
+70 verbose parsed url   search: null,
+70 verbose parsed url   query: null,
+70 verbose parsed url   pathname: '^1.5.2',
+70 verbose parsed url   path: '^1.5.2',
+70 verbose parsed url   href: '^1.5.2' }
+71 verbose addNamed [ 'async', '^1.5.2' ]
+72 verbose addNamed [ null, '>=1.5.2-0 <2.0.0-0' ]
+73 silly lockFile 2d30b875-async-1-5-2 async@^1.5.2
+74 verbose lock async@^1.5.2 /home/preetesh/.npm/2d30b875-async-1-5-2.lock
+75 verbose cache add [ 'connect@^3.4.0', null ]
+76 verbose cache add name=undefined spec="connect@^3.4.0" args=["connect@^3.4.0",null]
+77 verbose parsed url { protocol: null,
+77 verbose parsed url   slashes: null,
+77 verbose parsed url   auth: null,
+77 verbose parsed url   host: null,
+77 verbose parsed url   port: null,
+77 verbose parsed url   hostname: null,
+77 verbose parsed url   hash: null,
+77 verbose parsed url   search: null,
+77 verbose parsed url   query: null,
+77 verbose parsed url   pathname: 'connect@^3.4.0',
+77 verbose parsed url   path: 'connect@^3.4.0',
+77 verbose parsed url   href: 'connect@^3.4.0' }
+78 verbose cache add name="connect" spec="^3.4.0" args=["connect","^3.4.0"]
+79 verbose parsed url { protocol: null,
+79 verbose parsed url   slashes: null,
+79 verbose parsed url   auth: null,
+79 verbose parsed url   host: null,
+79 verbose parsed url   port: null,
+79 verbose parsed url   hostname: null,
+79 verbose parsed url   hash: null,
+79 verbose parsed url   search: null,
+79 verbose parsed url   query: null,
+79 verbose parsed url   pathname: '^3.4.0',
+79 verbose parsed url   path: '^3.4.0',
+79 verbose parsed url   href: '^3.4.0' }
+80 verbose addNamed [ 'connect', '^3.4.0' ]
+81 verbose addNamed [ null, '>=3.4.0-0 <4.0.0-0' ]
+82 silly lockFile e9fba75b-connect-3-4-0 connect@^3.4.0
+83 verbose lock connect@^3.4.0 /home/preetesh/.npm/e9fba75b-connect-3-4-0.lock
+84 verbose cache add [ 'connect-livereload@^0.5.0', null ]
+85 verbose cache add name=undefined spec="connect-livereload@^0.5.0" args=["connect-livereload@^0.5.0",null]
+86 verbose parsed url { protocol: null,
+86 verbose parsed url   slashes: null,
+86 verbose parsed url   auth: null,
+86 verbose parsed url   host: null,
+86 verbose parsed url   port: null,
+86 verbose parsed url   hostname: null,
+86 verbose parsed url   hash: null,
+86 verbose parsed url   search: null,
+86 verbose parsed url   query: null,
+86 verbose parsed url   pathname: 'connect-livereload@^0.5.0',
+86 verbose parsed url   path: 'connect-livereload@^0.5.0',
+86 verbose parsed url   href: 'connect-livereload@^0.5.0' }
+87 verbose cache add name="connect-livereload" spec="^0.5.0" args=["connect-livereload","^0.5.0"]
+88 verbose parsed url { protocol: null,
+88 verbose parsed url   slashes: null,
+88 verbose parsed url   auth: null,
+88 verbose parsed url   host: null,
+88 verbose parsed url   port: null,
+88 verbose parsed url   hostname: null,
+88 verbose parsed url   hash: null,
+88 verbose parsed url   search: null,
+88 verbose parsed url   query: null,
+88 verbose parsed url   pathname: '^0.5.0',
+88 verbose parsed url   path: '^0.5.0',
+88 verbose parsed url   href: '^0.5.0' }
+89 verbose addNamed [ 'connect-livereload', '^0.5.0' ]
+90 verbose addNamed [ null, '>=0.5.0-0 <0.6.0-0' ]
+91 silly lockFile 0eef2fe7-connect-livereload-0-5-0 connect-livereload@^0.5.0
+92 verbose lock connect-livereload@^0.5.0 /home/preetesh/.npm/0eef2fe7-connect-livereload-0-5-0.lock
+93 verbose cache add [ 'http2@https://github.com/gruntjs/node-http2#fix-return-value',
+93 verbose cache add   null ]
+94 verbose cache add name=undefined spec="http2@https://github.com/gruntjs/node-http2#fix-return-value" args=["http2@https://github.com/gruntjs/node-http2#fix-return-value",null]
+95 verbose parsed url { protocol: null,
+95 verbose parsed url   slashes: null,
+95 verbose parsed url   auth: null,
+95 verbose parsed url   host: null,
+95 verbose parsed url   port: null,
+95 verbose parsed url   hostname: null,
+95 verbose parsed url   hash: '#fix-return-value',
+95 verbose parsed url   search: null,
+95 verbose parsed url   query: null,
+95 verbose parsed url   pathname: 'http2@https://github.com/gruntjs/node-http2',
+95 verbose parsed url   path: 'http2@https://github.com/gruntjs/node-http2',
+95 verbose parsed url   href: 'http2@https://github.com/gruntjs/node-http2#fix-return-value' }
+96 verbose cache add name="http2" spec="https://github.com/gruntjs/node-http2#fix-return-value" args=["http2","https://github.com/gruntjs/node-http2#fix-return-value"]
+97 verbose parsed url { protocol: 'https:',
+97 verbose parsed url   slashes: true,
+97 verbose parsed url   auth: null,
+97 verbose parsed url   host: 'github.com',
+97 verbose parsed url   port: null,
+97 verbose parsed url   hostname: 'github.com',
+97 verbose parsed url   hash: '#fix-return-value',
+97 verbose parsed url   search: null,
+97 verbose parsed url   query: null,
+97 verbose parsed url   pathname: '/gruntjs/node-http2',
+97 verbose parsed url   path: '/gruntjs/node-http2',
+97 verbose parsed url   href: 'https://github.com/gruntjs/node-http2#fix-return-value' }
+98 silly lockFile 3fa0addf-ntjs-node-http2-fix-return-value https://github.com/gruntjs/node-http2#fix-return-value
+99 verbose lock https://github.com/gruntjs/node-http2#fix-return-value /home/preetesh/.npm/3fa0addf-ntjs-node-http2-fix-return-value.lock
+100 silly addNameRange { name: 'async', range: '>=1.5.2-0 <2.0.0-0', hasData: false }
+101 verbose cache add [ 'morgan@^1.6.1', null ]
+102 verbose cache add name=undefined spec="morgan@^1.6.1" args=["morgan@^1.6.1",null]
+103 verbose parsed url { protocol: null,
+103 verbose parsed url   slashes: null,
+103 verbose parsed url   auth: null,
+103 verbose parsed url   host: null,
+103 verbose parsed url   port: null,
+103 verbose parsed url   hostname: null,
+103 verbose parsed url   hash: null,
+103 verbose parsed url   search: null,
+103 verbose parsed url   query: null,
+103 verbose parsed url   pathname: 'morgan@^1.6.1',
+103 verbose parsed url   path: 'morgan@^1.6.1',
+103 verbose parsed url   href: 'morgan@^1.6.1' }
+104 verbose cache add name="morgan" spec="^1.6.1" args=["morgan","^1.6.1"]
+105 verbose parsed url { protocol: null,
+105 verbose parsed url   slashes: null,
+105 verbose parsed url   auth: null,
+105 verbose parsed url   host: null,
+105 verbose parsed url   port: null,
+105 verbose parsed url   hostname: null,
+105 verbose parsed url   hash: null,
+105 verbose parsed url   search: null,
+105 verbose parsed url   query: null,
+105 verbose parsed url   pathname: '^1.6.1',
+105 verbose parsed url   path: '^1.6.1',
+105 verbose parsed url   href: '^1.6.1' }
+106 verbose addNamed [ 'morgan', '^1.6.1' ]
+107 verbose addNamed [ null, '>=1.6.1-0 <2.0.0-0' ]
+108 silly lockFile 91ec9a1a-morgan-1-6-1 morgan@^1.6.1
+109 verbose lock morgan@^1.6.1 /home/preetesh/.npm/91ec9a1a-morgan-1-6-1.lock
+110 silly addNameRange { name: 'connect', range: '>=3.4.0-0 <4.0.0-0', hasData: false }
+111 silly addNameRange { name: 'connect-livereload',
+111 silly addNameRange   range: '>=0.5.0-0 <0.6.0-0',
+111 silly addNameRange   hasData: false }
+112 verbose addRemoteTarball [ 'https://github.com/gruntjs/node-http2#fix-return-value',
+112 verbose addRemoteTarball   null ]
+113 silly addNameRange { name: 'morgan', range: '>=1.6.1-0 <2.0.0-0', hasData: false }
+114 verbose url raw async
+115 verbose url resolving [ 'https://registry.npmjs.org/', './async' ]
+116 verbose url resolved https://registry.npmjs.org/async
+117 info trying registry request attempt 1 at 21:12:49
+118 verbose etag "9610CICWY4ZKMGKNG1P3RRKVG"
+119 http GET https://registry.npmjs.org/async
+120 verbose url raw connect-livereload
+121 verbose url resolving [ 'https://registry.npmjs.org/', './connect-livereload' ]
+122 verbose url resolved https://registry.npmjs.org/connect-livereload
+123 info trying registry request attempt 1 at 21:12:49
+124 verbose etag "6WN91ROEMUPMSIF1OF8H7I1F"
+125 http GET https://registry.npmjs.org/connect-livereload
+126 verbose cache add [ 'portscanner@^1.0.0', null ]
+127 verbose cache add name=undefined spec="portscanner@^1.0.0" args=["portscanner@^1.0.0",null]
+128 verbose parsed url { protocol: null,
+128 verbose parsed url   slashes: null,
+128 verbose parsed url   auth: null,
+128 verbose parsed url   host: null,
+128 verbose parsed url   port: null,
+128 verbose parsed url   hostname: null,
+128 verbose parsed url   hash: null,
+128 verbose parsed url   search: null,
+128 verbose parsed url   query: null,
+128 verbose parsed url   pathname: 'portscanner@^1.0.0',
+128 verbose parsed url   path: 'portscanner@^1.0.0',
+128 verbose parsed url   href: 'portscanner@^1.0.0' }
+129 verbose cache add name="portscanner" spec="^1.0.0" args=["portscanner","^1.0.0"]
+130 verbose parsed url { protocol: null,
+130 verbose parsed url   slashes: null,
+130 verbose parsed url   auth: null,
+130 verbose parsed url   host: null,
+130 verbose parsed url   port: null,
+130 verbose parsed url   hostname: null,
+130 verbose parsed url   hash: null,
+130 verbose parsed url   search: null,
+130 verbose parsed url   query: null,
+130 verbose parsed url   pathname: '^1.0.0',
+130 verbose parsed url   path: '^1.0.0',
+130 verbose parsed url   href: '^1.0.0' }
+131 verbose addNamed [ 'portscanner', '^1.0.0' ]
+132 verbose addNamed [ null, '>=1.0.0-0 <2.0.0-0' ]
+133 silly lockFile 124fc361-portscanner-1-0-0 portscanner@^1.0.0
+134 verbose lock portscanner@^1.0.0 /home/preetesh/.npm/124fc361-portscanner-1-0-0.lock
+135 verbose cache add [ 'opn@^4.0.0', null ]
+136 verbose cache add name=undefined spec="opn@^4.0.0" args=["opn@^4.0.0",null]
+137 verbose parsed url { protocol: null,
+137 verbose parsed url   slashes: null,
+137 verbose parsed url   auth: null,
+137 verbose parsed url   host: null,
+137 verbose parsed url   port: null,
+137 verbose parsed url   hostname: null,
+137 verbose parsed url   hash: null,
+137 verbose parsed url   search: null,
+137 verbose parsed url   query: null,
+137 verbose parsed url   pathname: 'opn@^4.0.0',
+137 verbose parsed url   path: 'opn@^4.0.0',
+137 verbose parsed url   href: 'opn@^4.0.0' }
+138 verbose cache add name="opn" spec="^4.0.0" args=["opn","^4.0.0"]
+139 verbose parsed url { protocol: null,
+139 verbose parsed url   slashes: null,
+139 verbose parsed url   auth: null,
+139 verbose parsed url   host: null,
+139 verbose parsed url   port: null,
+139 verbose parsed url   hostname: null,
+139 verbose parsed url   hash: null,
+139 verbose parsed url   search: null,
+139 verbose parsed url   query: null,
+139 verbose parsed url   pathname: '^4.0.0',
+139 verbose parsed url   path: '^4.0.0',
+139 verbose parsed url   href: '^4.0.0' }
+140 verbose addNamed [ 'opn', '^4.0.0' ]
+141 verbose addNamed [ null, '>=4.0.0-0 <5.0.0-0' ]
+142 silly lockFile 86b85bba-opn-4-0-0 opn@^4.0.0
+143 verbose lock opn@^4.0.0 /home/preetesh/.npm/86b85bba-opn-4-0-0.lock
+144 verbose cache add [ 'serve-index@^1.7.1', null ]
+145 verbose cache add name=undefined spec="serve-index@^1.7.1" args=["serve-index@^1.7.1",null]
+146 verbose parsed url { protocol: null,
+146 verbose parsed url   slashes: null,
+146 verbose parsed url   auth: null,
+146 verbose parsed url   host: null,
+146 verbose parsed url   port: null,
+146 verbose parsed url   hostname: null,
+146 verbose parsed url   hash: null,
+146 verbose parsed url   search: null,
+146 verbose parsed url   query: null,
+146 verbose parsed url   pathname: 'serve-index@^1.7.1',
+146 verbose parsed url   path: 'serve-index@^1.7.1',
+146 verbose parsed url   href: 'serve-index@^1.7.1' }
+147 verbose cache add name="serve-index" spec="^1.7.1" args=["serve-index","^1.7.1"]
+148 verbose parsed url { protocol: null,
+148 verbose parsed url   slashes: null,
+148 verbose parsed url   auth: null,
+148 verbose parsed url   host: null,
+148 verbose parsed url   port: null,
+148 verbose parsed url   hostname: null,
+148 verbose parsed url   hash: null,
+148 verbose parsed url   search: null,
+148 verbose parsed url   query: null,
+148 verbose parsed url   pathname: '^1.7.1',
+148 verbose parsed url   path: '^1.7.1',
+148 verbose parsed url   href: '^1.7.1' }
+149 verbose addNamed [ 'serve-index', '^1.7.1' ]
+150 verbose addNamed [ null, '>=1.7.1-0 <2.0.0-0' ]
+151 silly lockFile 76f514bb-serve-index-1-7-1 serve-index@^1.7.1
+152 verbose lock serve-index@^1.7.1 /home/preetesh/.npm/76f514bb-serve-index-1-7-1.lock
+153 verbose cache add [ 'serve-static@^1.10.0', null ]
+154 verbose cache add name=undefined spec="serve-static@^1.10.0" args=["serve-static@^1.10.0",null]
+155 verbose parsed url { protocol: null,
+155 verbose parsed url   slashes: null,
+155 verbose parsed url   auth: null,
+155 verbose parsed url   host: null,
+155 verbose parsed url   port: null,
+155 verbose parsed url   hostname: null,
+155 verbose parsed url   hash: null,
+155 verbose parsed url   search: null,
+155 verbose parsed url   query: null,
+155 verbose parsed url   pathname: 'serve-static@^1.10.0',
+155 verbose parsed url   path: 'serve-static@^1.10.0',
+155 verbose parsed url   href: 'serve-static@^1.10.0' }
+156 verbose cache add name="serve-static" spec="^1.10.0" args=["serve-static","^1.10.0"]
+157 verbose parsed url { protocol: null,
+157 verbose parsed url   slashes: null,
+157 verbose parsed url   auth: null,
+157 verbose parsed url   host: null,
+157 verbose parsed url   port: null,
+157 verbose parsed url   hostname: null,
+157 verbose parsed url   hash: null,
+157 verbose parsed url   search: null,
+157 verbose parsed url   query: null,
+157 verbose parsed url   pathname: '^1.10.0',
+157 verbose parsed url   path: '^1.10.0',
+157 verbose parsed url   href: '^1.10.0' }
+158 verbose addNamed [ 'serve-static', '^1.10.0' ]
+159 verbose addNamed [ null, '>=1.10.0-0 <2.0.0-0' ]
+160 silly lockFile ac390f3d-serve-static-1-10-0 serve-static@^1.10.0
+161 verbose lock serve-static@^1.10.0 /home/preetesh/.npm/ac390f3d-serve-static-1-10-0.lock
+162 info retry fetch attempt 1 at 21:12:49
+163 verbose fetch to= /home/preetesh/tmp/npm-8638-kRJbdCoc/1459698169297-0.6809089840389788/tmp.tgz
+164 verbose url raw connect
+165 verbose url resolving [ 'https://registry.npmjs.org/', './connect' ]
+166 verbose url resolved https://registry.npmjs.org/connect
+167 info trying registry request attempt 1 at 21:12:49
+168 verbose etag "6PY6FSUKQIWTI5IVWI4H7DL3O"
+169 http GET https://registry.npmjs.org/connect
+170 verbose url raw morgan
+171 verbose url resolving [ 'https://registry.npmjs.org/', './morgan' ]
+172 verbose url resolved https://registry.npmjs.org/morgan
+173 info trying registry request attempt 1 at 21:12:49
+174 verbose etag "DXC8NQ5QMCJW1BBMF7ZHK2DVA"
+175 http GET https://registry.npmjs.org/morgan
+176 silly addNameRange { name: 'portscanner',
+176 silly addNameRange   range: '>=1.0.0-0 <2.0.0-0',
+176 silly addNameRange   hasData: false }
+177 silly addNameRange { name: 'opn', range: '>=4.0.0-0 <5.0.0-0', hasData: false }
+178 silly addNameRange { name: 'serve-index',
+178 silly addNameRange   range: '>=1.7.1-0 <2.0.0-0',
+178 silly addNameRange   hasData: false }
+179 silly addNameRange { name: 'serve-static',
+179 silly addNameRange   range: '>=1.10.0-0 <2.0.0-0',
+179 silly addNameRange   hasData: false }
+180 http GET https://github.com/gruntjs/node-http2#fix-return-value
+181 verbose url raw portscanner
+182 verbose url resolving [ 'https://registry.npmjs.org/', './portscanner' ]
+183 verbose url resolved https://registry.npmjs.org/portscanner
+184 info trying registry request attempt 1 at 21:12:49
+185 verbose etag "6P3CUGH16PK060G4EIEVJLEVF"
+186 http GET https://registry.npmjs.org/portscanner
+187 verbose url raw opn
+188 verbose url resolving [ 'https://registry.npmjs.org/', './opn' ]
+189 verbose url resolved https://registry.npmjs.org/opn
+190 info trying registry request attempt 1 at 21:12:49
+191 verbose etag "7GDSYUC1I05ZBEWQT8DPDKNTI"
+192 http GET https://registry.npmjs.org/opn
+193 verbose url raw serve-index
+194 verbose url resolving [ 'https://registry.npmjs.org/', './serve-index' ]
+195 verbose url resolved https://registry.npmjs.org/serve-index
+196 info trying registry request attempt 1 at 21:12:49
+197 verbose etag "6SW6GDY9162HNM4VCG00EZ1I5"
+198 http GET https://registry.npmjs.org/serve-index
+199 verbose url raw serve-static
+200 verbose url resolving [ 'https://registry.npmjs.org/', './serve-static' ]
+201 verbose url resolved https://registry.npmjs.org/serve-static
+202 info trying registry request attempt 1 at 21:12:49
+203 verbose etag "9ZVXCNH2M4A7O1VEVOV16VZEG"
+204 http GET https://registry.npmjs.org/serve-static
+205 http 304 https://registry.npmjs.org/async
+206 silly registry.get cb [ 304,
+206 silly registry.get   { date: 'Sun, 03 Apr 2016 15:42:49 GMT',
+206 silly registry.get     via: '1.1 varnish',
+206 silly registry.get     'cache-control': 'max-age=300',
+206 silly registry.get     etag: '"9610CICWY4ZKMGKNG1P3RRKVG"',
+206 silly registry.get     age: '231',
+206 silly registry.get     connection: 'keep-alive',
+206 silly registry.get     'x-served-by': 'cache-sin6921-SIN',
+206 silly registry.get     'x-cache': 'HIT',
+206 silly registry.get     'x-cache-hits': '13',
+206 silly registry.get     'x-timer': 'S1459698169.881508,VS0,VE0',
+206 silly registry.get     vary: 'Accept' } ]
+207 verbose etag async from cache
+208 silly addNameRange number 2 { name: 'async', range: '>=1.5.2-0 <2.0.0-0', hasData: true }
+209 silly addNameRange versions [ 'async',
+209 silly addNameRange   [ '0.1.0',
+209 silly addNameRange     '0.1.1',
+209 silly addNameRange     '0.1.2',
+209 silly addNameRange     '0.1.3',
+209 silly addNameRange     '0.1.4',
+209 silly addNameRange     '0.1.5',
+209 silly addNameRange     '0.1.6',
+209 silly addNameRange     '0.1.7',
+209 silly addNameRange     '0.1.8',
+209 silly addNameRange     '0.1.9',
+209 silly addNameRange     '0.1.10',
+209 silly addNameRange     '0.1.11',
+209 silly addNameRange     '0.1.12',
+209 silly addNameRange     '0.1.13',
+209 silly addNameRange     '0.1.14',
+209 silly addNameRange     '0.1.15',
+209 silly addNameRange     '0.1.16',
+209 silly addNameRange     '0.1.17',
+209 silly addNameRange     '0.1.18',
+209 silly addNameRange     '0.1.19',
+209 silly addNameRange     '0.1.20',
+209 silly addNameRange     '0.1.21',
+209 silly addNameRange     '0.1.22',
+209 silly addNameRange     '0.2.0',
+209 silly addNameRange     '0.2.1',
+209 silly addNameRange     '0.2.2',
+209 silly addNameRange     '0.2.3',
+209 silly addNameRange     '0.2.4',
+209 silly addNameRange     '0.2.5',
+209 silly addNameRange     '0.2.6',
+209 silly addNameRange     '0.2.7',
+209 silly addNameRange     '0.2.8',
+209 silly addNameRange     '0.2.9',
+209 silly addNameRange     '0.2.10',
+209 silly addNameRange     '0.3.0',
+209 silly addNameRange     '0.4.0',
+209 silly addNameRange     '0.4.1',
+209 silly addNameRange     '0.5.0',
+209 silly addNameRange     '0.6.0',
+209 silly addNameRange     '0.6.1',
+209 silly addNameRange     '0.6.2',
+209 silly addNameRange     '0.7.0',
+209 silly addNameRange     '0.8.0',
+209 silly addNameRange     '0.9.0',
+209 silly addNameRange     '0.9.2',
+209 silly addNameRange     '1.0.0',
+209 silly addNameRange     '1.1.0',
+209 silly addNameRange     '1.2.0',
+209 silly addNameRange     '1.1.1',
+209 silly addNameRange     '1.2.1',
+209 silly addNameRange     '1.3.0',
+209 silly addNameRange     '1.4.0',
+209 silly addNameRange     '1.4.1',
+209 silly addNameRange     '1.4.2',
+209 silly addNameRange     '1.5.0',
+209 silly addNameRange     '1.5.1',
+209 silly addNameRange     '1.5.2',
+209 silly addNameRange     '2.0.0-alpha.0',
+209 silly addNameRange     '2.0.0-rc.1',
+209 silly addNameRange     '2.0.0-rc.2' ] ]
+210 verbose addNamed [ 'async', '1.5.2' ]
+211 verbose addNamed [ '1.5.2', '1.5.2' ]
+212 silly lockFile 2d6754e3-async-1-5-2 async@1.5.2
+213 verbose lock async@1.5.2 /home/preetesh/.npm/2d6754e3-async-1-5-2.lock
+214 silly lockFile 2d6754e3-async-1-5-2 async@1.5.2
+215 silly lockFile 2d6754e3-async-1-5-2 async@1.5.2
+216 silly lockFile 2d30b875-async-1-5-2 async@^1.5.2
+217 silly lockFile 2d30b875-async-1-5-2 async@^1.5.2
+218 http 304 https://registry.npmjs.org/connect-livereload
+219 silly registry.get cb [ 304,
+219 silly registry.get   { date: 'Sun, 03 Apr 2016 15:42:49 GMT',
+219 silly registry.get     via: '1.1 varnish',
+219 silly registry.get     'cache-control': 'max-age=300',
+219 silly registry.get     etag: '"6WN91ROEMUPMSIF1OF8H7I1F"',
+219 silly registry.get     age: '70',
+219 silly registry.get     connection: 'keep-alive',
+219 silly registry.get     'x-served-by': 'cache-sin6924-SIN',
+219 silly registry.get     'x-cache': 'HIT',
+219 silly registry.get     'x-cache-hits': '1',
+219 silly registry.get     'x-timer': 'S1459698169.901962,VS0,VE0',
+219 silly registry.get     vary: 'Accept' } ]
+220 verbose etag connect-livereload from cache
+221 silly addNameRange number 2 { name: 'connect-livereload',
+221 silly addNameRange   range: '>=0.5.0-0 <0.6.0-0',
+221 silly addNameRange   hasData: true }
+222 silly addNameRange versions [ 'connect-livereload',
+222 silly addNameRange   [ '0.0.2',
+222 silly addNameRange     '0.0.3',
+222 silly addNameRange     '0.1.0',
+222 silly addNameRange     '0.1.1',
+222 silly addNameRange     '0.1.2',
+222 silly addNameRange     '0.1.3',
+222 silly addNameRange     '0.1.4',
+222 silly addNameRange     '0.2.0',
+222 silly addNameRange     '0.3.0',
+222 silly addNameRange     '0.3.1',
+222 silly addNameRange     '0.3.2',
+222 silly addNameRange     '0.4.0',
+222 silly addNameRange     '0.4.1',
+222 silly addNameRange     '0.5.0',
+222 silly addNameRange     '0.5.1',
+222 silly addNameRange     '0.5.2',
+222 silly addNameRange     '0.5.3',
+222 silly addNameRange     '0.5.4' ] ]
+223 verbose addNamed [ 'connect-livereload', '0.5.4' ]
+224 verbose addNamed [ '0.5.4', '0.5.4' ]
+225 silly lockFile bb4a0bb4-connect-livereload-0-5-4 connect-livereload@0.5.4
+226 verbose lock connect-livereload@0.5.4 /home/preetesh/.npm/bb4a0bb4-connect-livereload-0-5-4.lock
+227 silly lockFile bb4a0bb4-connect-livereload-0-5-4 connect-livereload@0.5.4
+228 silly lockFile bb4a0bb4-connect-livereload-0-5-4 connect-livereload@0.5.4
+229 silly lockFile 0eef2fe7-connect-livereload-0-5-0 connect-livereload@^0.5.0
+230 silly lockFile 0eef2fe7-connect-livereload-0-5-0 connect-livereload@^0.5.0
+231 http 304 https://registry.npmjs.org/morgan
+232 silly registry.get cb [ 304,
+232 silly registry.get   { date: 'Sun, 03 Apr 2016 15:42:49 GMT',
+232 silly registry.get     via: '1.1 varnish',
+232 silly registry.get     'cache-control': 'max-age=300',
+232 silly registry.get     etag: '"DXC8NQ5QMCJW1BBMF7ZHK2DVA"',
+232 silly registry.get     age: '230',
+232 silly registry.get     connection: 'keep-alive',
+232 silly registry.get     'x-served-by': 'cache-sin6923-SIN',
+232 silly registry.get     'x-cache': 'HIT',
+232 silly registry.get     'x-cache-hits': '1',
+232 silly registry.get     'x-timer': 'S1459698169.911704,VS0,VE0',
+232 silly registry.get     vary: 'Accept' } ]
+233 verbose etag morgan from cache
+234 silly addNameRange number 2 { name: 'morgan', range: '>=1.6.1-0 <2.0.0-0', hasData: true }
+235 silly addNameRange versions [ 'morgan',
+235 silly addNameRange   [ '1.0.0',
+235 silly addNameRange     '1.0.1',
+235 silly addNameRange     '1.1.0',
+235 silly addNameRange     '1.1.1',
+235 silly addNameRange     '1.2.0',
+235 silly addNameRange     '1.2.1',
+235 silly addNameRange     '1.2.2',
+235 silly addNameRange     '1.2.3',
+235 silly addNameRange     '1.3.0',
+235 silly addNameRange     '1.3.1',
+235 silly addNameRange     '1.3.2',
+235 silly addNameRange     '1.4.0',
+235 silly addNameRange     '1.4.1',
+235 silly addNameRange     '1.5.0',
+235 silly addNameRange     '1.5.1',
+235 silly addNameRange     '1.5.2',
+235 silly addNameRange     '1.5.3',
+235 silly addNameRange     '1.6.0',
+235 silly addNameRange     '1.6.1',
+235 silly addNameRange     '1.7.0' ] ]
+236 verbose addNamed [ 'morgan', '1.7.0' ]
+237 verbose addNamed [ '1.7.0', '1.7.0' ]
+238 silly lockFile 82b7dd69-morgan-1-7-0 morgan@1.7.0
+239 verbose lock morgan@1.7.0 /home/preetesh/.npm/82b7dd69-morgan-1-7-0.lock
+240 silly lockFile 82b7dd69-morgan-1-7-0 morgan@1.7.0
+241 silly lockFile 82b7dd69-morgan-1-7-0 morgan@1.7.0
+242 silly lockFile 91ec9a1a-morgan-1-6-1 morgan@^1.6.1
+243 silly lockFile 91ec9a1a-morgan-1-6-1 morgan@^1.6.1
+244 http 304 https://registry.npmjs.org/portscanner
+245 silly registry.get cb [ 304,
+245 silly registry.get   { date: 'Sun, 03 Apr 2016 15:42:49 GMT',
+245 silly registry.get     via: '1.1 varnish',
+245 silly registry.get     'cache-control': 'max-age=300',
+245 silly registry.get     etag: '"6P3CUGH16PK060G4EIEVJLEVF"',
+245 silly registry.get     age: '177',
+245 silly registry.get     connection: 'keep-alive',
+245 silly registry.get     'x-served-by': 'cache-sin6923-SIN',
+245 silly registry.get     'x-cache': 'HIT',
+245 silly registry.get     'x-cache-hits': '29',
+245 silly registry.get     'x-timer': 'S1459698169.935356,VS0,VE0',
+245 silly registry.get     vary: 'Accept' } ]
+246 verbose etag portscanner from cache
+247 silly addNameRange number 2 { name: 'portscanner',
+247 silly addNameRange   range: '>=1.0.0-0 <2.0.0-0',
+247 silly addNameRange   hasData: true }
+248 silly addNameRange versions [ 'portscanner',
+248 silly addNameRange   [ '0.1.0',
+248 silly addNameRange     '0.1.1',
+248 silly addNameRange     '0.1.2',
+248 silly addNameRange     '0.1.3',
+248 silly addNameRange     '0.2.0',
+248 silly addNameRange     '0.2.1',
+248 silly addNameRange     '0.2.2',
+248 silly addNameRange     '0.2.3',
+248 silly addNameRange     '1.0.0' ] ]
+249 verbose addNamed [ 'portscanner', '1.0.0' ]
+250 verbose addNamed [ '1.0.0', '1.0.0' ]
+251 silly lockFile 3fadcf78-portscanner-1-0-0 portscanner@1.0.0
+252 verbose lock portscanner@1.0.0 /home/preetesh/.npm/3fadcf78-portscanner-1-0-0.lock
+253 silly lockFile 3fadcf78-portscanner-1-0-0 portscanner@1.0.0
+254 silly lockFile 3fadcf78-portscanner-1-0-0 portscanner@1.0.0
+255 silly lockFile 124fc361-portscanner-1-0-0 portscanner@^1.0.0
+256 silly lockFile 124fc361-portscanner-1-0-0 portscanner@^1.0.0
+257 http 304 https://registry.npmjs.org/connect
+258 silly registry.get cb [ 304,
+258 silly registry.get   { date: 'Sun, 03 Apr 2016 15:42:49 GMT',
+258 silly registry.get     via: '1.1 varnish',
+258 silly registry.get     'cache-control': 'max-age=300',
+258 silly registry.get     etag: '"6PY6FSUKQIWTI5IVWI4H7DL3O"',
+258 silly registry.get     age: '258',
+258 silly registry.get     connection: 'keep-alive',
+258 silly registry.get     'x-served-by': 'cache-sin6924-SIN',
+258 silly registry.get     'x-cache': 'HIT',
+258 silly registry.get     'x-cache-hits': '5',
+258 silly registry.get     'x-timer': 'S1459698169.950754,VS0,VE0',
+258 silly registry.get     vary: 'Accept' } ]
+259 verbose etag connect from cache
+260 silly addNameRange number 2 { name: 'connect', range: '>=3.4.0-0 <4.0.0-0', hasData: true }
+261 silly addNameRange versions [ 'connect',
+261 silly addNameRange   [ '0.0.1',
+261 silly addNameRange     '0.0.2',
+261 silly addNameRange     '0.0.3',
+261 silly addNameRange     '0.0.4',
+261 silly addNameRange     '0.0.5',
+261 silly addNameRange     '0.0.6',
+261 silly addNameRange     '0.1.0',
+261 silly addNameRange     '0.2.0',
+261 silly addNameRange     '0.2.1',
+261 silly addNameRange     '0.2.2',
+261 silly addNameRange     '0.2.3',
+261 silly addNameRange     '0.2.4',
+261 silly addNameRange     '0.2.5',
+261 silly addNameRange     '0.2.6',
+261 silly addNameRange     '0.2.7',
+261 silly addNameRange     '0.3.0',
+261 silly addNameRange     '0.4.0',
+261 silly addNameRange     '0.5.0',
+261 silly addNameRange     '0.5.1',
+261 silly addNameRange     '0.5.2',
+261 silly addNameRange     '0.5.3',
+261 silly addNameRange     '0.5.4',
+261 silly addNameRange     '0.5.5',
+261 silly addNameRange     '0.5.6',
+261 silly addNameRange     '0.5.7',
+261 silly addNameRange     '0.5.8',
+261 silly addNameRange     '0.5.9',
+261 silly addNameRange     '0.5.10',
+261 silly addNameRange     '1.0.0',
+261 silly addNameRange     '1.0.1',
+261 silly addNameRange     '1.0.2',
+261 silly addNameRange     '1.0.3',
+261 silly addNameRange     '1.0.4',
+261 silly addNameRange     '1.0.5',
+261 silly addNameRange     '1.0.6',
+261 silly addNameRange     '1.1.0',
+261 silly addNameRange     '1.1.1',
+261 silly addNameRange     '1.1.2',
+261 silly addNameRange     '1.1.3',
+261 silly addNameRange     '1.1.4',
+261 silly addNameRange     '1.1.5',
+261 silly addNameRange     '1.2.0',
+261 silly addNameRange     '1.2.1',
+261 silly addNameRange     '1.2.2',
+261 silly addNameRange     '1.2.3',
+261 silly addNameRange     '1.3.0',
+261 silly addNameRange     '1.4.0',
+261 silly addNameRange     '1.4.1',
+261 silly addNameRange     '1.4.2',
+261 silly addNameRange     '1.4.3',
+261 silly addNameRange     '1.4.4',
+261 silly addNameRange     '1.4.5',
+261 silly addNameRange     '1.4.6',
+261 silly addNameRange     '1.5.0',
+261 silly addNameRange     '1.5.1',
+261 silly addNameRange     '1.5.2',
+261 silly addNameRange     '1.6.0',
+261 silly addNameRange     '1.6.1',
+261 silly addNameRange     '1.6.2',
+261 silly addNameRange     '1.6.3',
+261 silly addNameRange     '1.6.4',
+261 silly addNameRange     '1.7.0',
+261 silly addNameRange     '1.7.1',
+261 silly addNameRange     '1.7.2',
+261 silly addNameRange     '1.7.3',
+261 silly addNameRange     '1.8.0',
+261 silly addNameRange     '1.8.1',
+261 silly addNameRange     '1.8.2',
+261 silly addNameRange     '1.8.3',
+261 silly addNameRange     '1.8.4',
+261 silly addNameRange     '1.8.5',
+261 silly addNameRange     '2.0.0',
+261 silly addNameRange     '2.0.1',
+261 silly addNameRange     '2.0.2',
+261 silly addNameRange     '2.0.3',
+261 silly addNameRange     '1.8.6',
+261 silly addNameRange     '2.1.0',
+261 silly addNameRange     '2.1.1',
+261 silly addNameRange     '2.1.2',
+261 silly addNameRange     '1.8.7',
+261 silly addNameRange     '2.1.3',
+261 silly addNameRange     '2.2.0',
+261 silly addNameRange     '2.2.1',
+261 silly addNameRange     '2.2.2',
+261 silly addNameRange     '2.3.0',
+261 silly addNameRange     '2.3.1',
+261 silly addNameRange     '2.3.2',
+261 silly addNameRange     '2.3.3',
+261 silly addNameRange     '1.9.0',
+261 silly addNameRange     '1.9.1',
+261 silly addNameRange     '2.3.4',
+261 silly addNameRange     '2.3.5',
+261 silly addNameRange     '2.3.6',
+261 silly addNameRange     '2.3.7',
+261 silly addNameRange     '1.9.2',
+261 silly addNameRange     '2.3.8',
+261 silly addNameRange     '2.3.9',
+261 silly addNameRange     '2.4.0',
+261 silly addNameRange     '2.4.1',
+261 silly addNameRange     '2.4.2',
+261 silly addNameRange     '2.4.3',
+261 silly addNameRange     '2.4.4',
+261 silly addNameRange     '2.4.5',
+261 silly addNameRange     '2.4.6',
+261 silly addNameRange     '2.5.0',
+261 silly addNameRange     '2.6.0',
+261 silly addNameRange     '2.6.1',
+261 silly addNameRange     '2.6.2',
+261 silly addNameRange     '2.7.0',
+261 silly addNameRange     '2.7.1',
+261 silly addNameRange     '2.7.2',
+261 silly addNameRange     '2.7.3',
+261 silly addNameRange     '2.7.4',
+261 silly addNameRange     '2.7.5',
+261 silly addNameRange     '2.7.6',
+261 silly addNameRange     '2.7.7',
+261 silly addNameRange     '2.7.8',
+261 silly addNameRange     '2.7.9',
+261 silly addNameRange     '2.7.10',
+261 silly addNameRange     '2.7.11',
+261 silly addNameRange     '2.8.0',
+261 silly addNameRange     '2.8.1',
+261 silly addNameRange     '2.8.2',
+261 silly addNameRange     '2.8.3',
+261 silly addNameRange     '2.8.4',
+261 silly addNameRange     '2.8.5',
+261 silly addNameRange     '2.8.6',
+261 silly addNameRange     '2.8.7',
+261 silly addNameRange     '2.8.8',
+261 silly addNameRange     '2.9.0',
+261 silly addNameRange     '2.9.1',
+261 silly addNameRange     '2.9.2',
+261 silly addNameRange     '2.10.0',
+261 silly addNameRange     '2.10.1',
+261 silly addNameRange     '2.11.0',
+261 silly addNameRange     '2.11.1',
+261 silly addNameRange     '2.11.2',
+261 silly addNameRange     '2.12.0',
+261 silly addNameRange     '2.13.0',
+261 silly addNameRange     '2.13.1',
+261 silly addNameRange     '2.14.0',
+261 silly addNameRange     '2.14.1',
+261 silly addNameRange     '3.0.0-rc.1',
+261 silly addNameRange     '2.14.2',
+261 silly addNameRange     '2.14.3',
+261 silly addNameRange     '2.14.4',
+261 silly addNameRange     '2.14.5',
+261 silly addNameRange     '2.15.0',
+261 silly addNameRange     '3.0.0-rc.2',
+261 silly addNameRange     '2.16.0',
+261 silly addNameRange     '2.16.1',
+261 silly addNameRange     '2.16.2',
+261 silly addNameRange     '2.17.0',
+261 silly addNameRange     '2.17.1',
+261 silly addNameRange     '2.17.2',
+261 silly addNameRange     '2.17.3',
+261 silly addNameRange     '2.18.0',
+261 silly addNameRange     '3.0.0',
+261 silly addNameRange     '2.19.0',
+261 silly addNameRange     '2.19.1',
+261 silly addNameRange     '2.19.2',
+261 silly addNameRange     '2.19.3',
+261 silly addNameRange     '2.19.4',
+261 silly addNameRange     '2.19.5',
+261 silly addNameRange     '2.19.6',
+261 silly addNameRange     '2.20.0',
+261 silly addNameRange     '2.20.1',
+261 silly addNameRange     '2.20.2',
+261 silly addNameRange     '3.0.1',
+261 silly addNameRange     '2.21.0',
+261 silly addNameRange     '2.21.1',
+261 silly addNameRange     '2.22.0',
+261 silly addNameRange     '2.23.0',
+261 silly addNameRange     '3.0.2',
+261 silly addNameRange     '2.24.0',
+261 silly addNameRange     '3.1.0',
+261 silly addNameRange     '2.24.1',
+261 silly addNameRange     '2.24.2',
+261 silly addNameRange     '2.24.3',
+261 silly addNameRange     '2.25.0',
+261 silly addNameRange     '2.25.1',
+261 silly addNameRange     '2.25.2',
+261 silly addNameRange     '2.25.3',
+261 silly addNameRange     '2.25.4',
+261 silly addNameRange     '3.1.1',
+261 silly addNameRange     '2.25.5',
+261 silly addNameRange     '2.25.6',
+261 silly addNameRange     '2.25.7',
+261 silly addNameRange     '2.25.8',
+261 silly addNameRange     '2.25.9',
+261 silly addNameRange     '2.25.10',
+261 silly addNameRange     '2.26.0',
+261 silly addNameRange     '3.2.0',
+261 silly addNameRange     '2.26.1',
+261 silly addNameRange     '2.26.2',
+261 silly addNameRange     '2.26.3',
+261 silly addNameRange     '2.26.4',
+261 silly addNameRange     '2.26.5',
+261 silly addNameRange     '2.26.6',
+261 silly addNameRange     '2.27.0',
+261 silly addNameRange     '3.3.0',
+261 silly addNameRange     '2.27.1',
+261 silly addNameRange     '3.3.1',
+261 silly addNameRange     '2.27.2',
+261 silly addNameRange     '3.3.2',
+261 silly addNameRange     '2.27.3',
+261 silly addNameRange     '3.3.3',
+261 silly addNameRange     '2.27.4',
+261 silly addNameRange     '2.27.5',
+261 silly addNameRange     '2.27.6',
+261 silly addNameRange     '2.28.0',
+261 silly addNameRange     '3.3.4',
+261 silly addNameRange     '2.28.1',
+261 silly addNameRange     '2.28.2',
+261 silly addNameRange     '2.28.3',
+261 silly addNameRange     '2.29.0',
+261 silly addNameRange     '2.29.1',
+261 silly addNameRange     '3.3.5',
+261 silly addNameRange     '2.29.2',
+261 silly addNameRange     '2.30.0',
+261 silly addNameRange     '3.4.0',
+261 silly addNameRange     '2.30.1',
+261 silly addNameRange     '2.30.2',
+261 silly addNameRange     '3.4.1' ] ]
+262 verbose addNamed [ 'connect', '3.4.1' ]
+263 verbose addNamed [ '3.4.1', '3.4.1' ]
+264 silly lockFile defb4693-connect-3-4-1 connect@3.4.1
+265 verbose lock connect@3.4.1 /home/preetesh/.npm/defb4693-connect-3-4-1.lock
+266 silly lockFile defb4693-connect-3-4-1 connect@3.4.1
+267 silly lockFile defb4693-connect-3-4-1 connect@3.4.1
+268 silly lockFile e9fba75b-connect-3-4-0 connect@^3.4.0
+269 silly lockFile e9fba75b-connect-3-4-0 connect@^3.4.0
+270 http 304 https://registry.npmjs.org/opn
+271 silly registry.get cb [ 304,
+271 silly registry.get   { date: 'Sun, 03 Apr 2016 15:42:49 GMT',
+271 silly registry.get     via: '1.1 varnish',
+271 silly registry.get     'cache-control': 'max-age=300',
+271 silly registry.get     etag: '"7GDSYUC1I05ZBEWQT8DPDKNTI"',
+271 silly registry.get     age: '221',
+271 silly registry.get     connection: 'keep-alive',
+271 silly registry.get     'x-served-by': 'cache-sin6921-SIN',
+271 silly registry.get     'x-cache': 'HIT',
+271 silly registry.get     'x-cache-hits': '2',
+271 silly registry.get     'x-timer': 'S1459698169.987470,VS0,VE0',
+271 silly registry.get     vary: 'Accept' } ]
+272 verbose etag opn from cache
+273 silly addNameRange number 2 { name: 'opn', range: '>=4.0.0-0 <5.0.0-0', hasData: true }
+274 silly addNameRange versions [ 'opn',
+274 silly addNameRange   [ '0.1.0',
+274 silly addNameRange     '0.1.1',
+274 silly addNameRange     '0.1.2',
+274 silly addNameRange     '1.0.0',
+274 silly addNameRange     '1.0.1',
+274 silly addNameRange     '1.0.2',
+274 silly addNameRange     '2.0.0',
+274 silly addNameRange     '2.0.1',
+274 silly addNameRange     '3.0.0',
+274 silly addNameRange     '3.0.1',
+274 silly addNameRange     '3.0.2',
+274 silly addNameRange     '3.0.3',
+274 silly addNameRange     '4.0.0',
+274 silly addNameRange     '4.0.1' ] ]
+275 verbose addNamed [ 'opn', '4.0.1' ]
+276 verbose addNamed [ '4.0.1', '4.0.1' ]
+277 silly lockFile 59b4ad2e-opn-4-0-1 opn@4.0.1
+278 verbose lock opn@4.0.1 /home/preetesh/.npm/59b4ad2e-opn-4-0-1.lock
+279 silly lockFile 59b4ad2e-opn-4-0-1 opn@4.0.1
+280 silly lockFile 59b4ad2e-opn-4-0-1 opn@4.0.1
+281 silly lockFile 86b85bba-opn-4-0-0 opn@^4.0.0
+282 silly lockFile 86b85bba-opn-4-0-0 opn@^4.0.0
+283 http 304 https://registry.npmjs.org/serve-index
+284 silly registry.get cb [ 304,
+284 silly registry.get   { date: 'Sun, 03 Apr 2016 15:42:50 GMT',
+284 silly registry.get     via: '1.1 varnish',
+284 silly registry.get     'cache-control': 'max-age=300',
+284 silly registry.get     etag: '"6SW6GDY9162HNM4VCG00EZ1I5"',
+284 silly registry.get     age: '117',
+284 silly registry.get     connection: 'keep-alive',
+284 silly registry.get     'x-served-by': 'cache-sin6924-SIN',
+284 silly registry.get     'x-cache': 'HIT',
+284 silly registry.get     'x-cache-hits': '1',
+284 silly registry.get     'x-timer': 'S1459698170.013130,VS0,VE0',
+284 silly registry.get     vary: 'Accept' } ]
+285 verbose etag serve-index from cache
+286 silly addNameRange number 2 { name: 'serve-index',
+286 silly addNameRange   range: '>=1.7.1-0 <2.0.0-0',
+286 silly addNameRange   hasData: true }
+287 silly addNameRange versions [ 'serve-index',
+287 silly addNameRange   [ '1.0.0',
+287 silly addNameRange     '1.0.1',
+287 silly addNameRange     '1.0.2',
+287 silly addNameRange     '1.0.3',
+287 silly addNameRange     '1.1.0',
+287 silly addNameRange     '1.1.1',
+287 silly addNameRange     '1.1.2',
+287 silly addNameRange     '1.1.3',
+287 silly addNameRange     '1.1.4',
+287 silly addNameRange     '1.1.5',
+287 silly addNameRange     '1.1.6',
+287 silly addNameRange     '1.2.0',
+287 silly addNameRange     '1.2.1',
+287 silly addNameRange     '1.3.0',
+287 silly addNameRange     '1.3.1',
+287 silly addNameRange     '1.4.0',
+287 silly addNameRange     '1.4.1',
+287 silly addNameRange     '1.5.0',
+287 silly addNameRange     '1.5.1',
+287 silly addNameRange     '1.5.2',
+287 silly addNameRange     '1.5.3',
+287 silly addNameRange     '1.6.0',
+287 silly addNameRange     '1.6.1',
+287 silly addNameRange     '1.6.2',
+287 silly addNameRange     '1.6.3',
+287 silly addNameRange     '1.6.4',
+287 silly addNameRange     '1.7.0',
+287 silly addNameRange     '1.7.1',
+287 silly addNameRange     '1.7.2',
+287 silly addNameRange     '1.7.3' ] ]
+288 verbose addNamed [ 'serve-index', '1.7.3' ]
+289 verbose addNamed [ '1.7.3', '1.7.3' ]
+290 silly lockFile 50d1a203-serve-index-1-7-3 serve-index@1.7.3
+291 verbose lock serve-index@1.7.3 /home/preetesh/.npm/50d1a203-serve-index-1-7-3.lock
+292 silly lockFile 50d1a203-serve-index-1-7-3 serve-index@1.7.3
+293 silly lockFile 50d1a203-serve-index-1-7-3 serve-index@1.7.3
+294 silly lockFile 76f514bb-serve-index-1-7-1 serve-index@^1.7.1
+295 silly lockFile 76f514bb-serve-index-1-7-1 serve-index@^1.7.1
+296 http 304 https://registry.npmjs.org/serve-static
+297 silly registry.get cb [ 304,
+297 silly registry.get   { date: 'Sun, 03 Apr 2016 15:42:50 GMT',
+297 silly registry.get     via: '1.1 varnish',
+297 silly registry.get     'cache-control': 'max-age=300',
+297 silly registry.get     etag: '"9ZVXCNH2M4A7O1VEVOV16VZEG"',
+297 silly registry.get     age: '62',
+297 silly registry.get     connection: 'keep-alive',
+297 silly registry.get     'x-served-by': 'cache-sin6923-SIN',
+297 silly registry.get     'x-cache': 'HIT',
+297 silly registry.get     'x-cache-hits': '2',
+297 silly registry.get     'x-timer': 'S1459698170.023020,VS0,VE0',
+297 silly registry.get     vary: 'Accept' } ]
+298 verbose etag serve-static from cache
+299 silly addNameRange number 2 { name: 'serve-static',
+299 silly addNameRange   range: '>=1.10.0-0 <2.0.0-0',
+299 silly addNameRange   hasData: true }
+300 silly addNameRange versions [ 'serve-static',
+300 silly addNameRange   [ '1.0.0',
+300 silly addNameRange     '1.0.1',
+300 silly addNameRange     '1.0.2',
+300 silly addNameRange     '1.0.3',
+300 silly addNameRange     '1.0.4',
+300 silly addNameRange     '1.1.0',
+300 silly addNameRange     '1.2.0',
+300 silly addNameRange     '1.2.1',
+300 silly addNameRange     '1.2.2',
+300 silly addNameRange     '1.2.3',
+300 silly addNameRange     '1.3.0',
+300 silly addNameRange     '1.3.1',
+300 silly addNameRange     '1.3.2',
+300 silly addNameRange     '1.4.0',
+300 silly addNameRange     '1.4.1',
+300 silly addNameRange     '1.4.2',
+300 silly addNameRange     '1.4.3',
+300 silly addNameRange     '1.4.4',
+300 silly addNameRange     '1.5.0',
+300 silly addNameRange     '1.5.1',
+300 silly addNameRange     '1.5.2',
+300 silly addNameRange     '1.5.3',
+300 silly addNameRange     '1.5.4',
+300 silly addNameRange     '1.6.0',
+300 silly addNameRange     '1.6.1',
+300 silly addNameRange     '1.6.2',
+300 silly addNameRange     '1.6.3',
+300 silly addNameRange     '1.6.4',
+300 silly addNameRange     '1.7.0',
+300 silly addNameRange     '1.7.1',
+300 silly addNameRange     '1.7.2',
+300 silly addNameRange     '1.8.0',
+300 silly addNameRange     '1.8.1',
+300 silly addNameRange     '1.6.5',
+300 silly addNameRange     '1.9.0',
+300 silly addNameRange     '1.9.1',
+300 silly addNameRange     '1.9.2',
+300 silly addNameRange     '1.9.3',
+300 silly addNameRange     '1.10.0',
+300 silly addNameRange     '1.10.1',
+300 silly addNameRange     '1.10.2' ] ]
+301 verbose addNamed [ 'serve-static', '1.10.2' ]
+302 verbose addNamed [ '1.10.2', '1.10.2' ]
+303 silly lockFile 2ad3cf0f-serve-static-1-10-2 serve-static@1.10.2
+304 verbose lock serve-static@1.10.2 /home/preetesh/.npm/2ad3cf0f-serve-static-1-10-2.lock
+305 silly lockFile 2ad3cf0f-serve-static-1-10-2 serve-static@1.10.2
+306 silly lockFile 2ad3cf0f-serve-static-1-10-2 serve-static@1.10.2
+307 silly lockFile ac390f3d-serve-static-1-10-0 serve-static@^1.10.0
+308 silly lockFile ac390f3d-serve-static-1-10-0 serve-static@^1.10.0
+309 http 200 https://github.com/gruntjs/node-http2#fix-return-value
+310 verbose tar unpack /home/preetesh/tmp/npm-8638-kRJbdCoc/1459698169297-0.6809089840389788/tmp.tgz
+311 silly lockFile 1793e936-69297-0-6809089840389788-package tar:///home/preetesh/tmp/npm-8638-kRJbdCoc/1459698169297-0.6809089840389788/package
+312 verbose lock tar:///home/preetesh/tmp/npm-8638-kRJbdCoc/1459698169297-0.6809089840389788/package /home/preetesh/.npm/1793e936-69297-0-6809089840389788-package.lock
+313 silly lockFile 12dafb5b-69297-0-6809089840389788-tmp-tgz tar:///home/preetesh/tmp/npm-8638-kRJbdCoc/1459698169297-0.6809089840389788/tmp.tgz
+314 verbose lock tar:///home/preetesh/tmp/npm-8638-kRJbdCoc/1459698169297-0.6809089840389788/tmp.tgz /home/preetesh/.npm/12dafb5b-69297-0-6809089840389788-tmp-tgz.lock
+315 silly gunzTarPerm modes [ '755', '644' ]
+316 error not a package /home/preetesh/tmp/npm-8638-kRJbdCoc/1459698169297-0.6809089840389788/tmp.tgz
+317 silly lockFile 1793e936-69297-0-6809089840389788-package tar:///home/preetesh/tmp/npm-8638-kRJbdCoc/1459698169297-0.6809089840389788/package
+318 silly lockFile 1793e936-69297-0-6809089840389788-package tar:///home/preetesh/tmp/npm-8638-kRJbdCoc/1459698169297-0.6809089840389788/package
+319 silly lockFile 12dafb5b-69297-0-6809089840389788-tmp-tgz tar:///home/preetesh/tmp/npm-8638-kRJbdCoc/1459698169297-0.6809089840389788/tmp.tgz
+320 silly lockFile 12dafb5b-69297-0-6809089840389788-tmp-tgz tar:///home/preetesh/tmp/npm-8638-kRJbdCoc/1459698169297-0.6809089840389788/tmp.tgz
+321 silly lockFile 3fa0addf-ntjs-node-http2-fix-return-value https://github.com/gruntjs/node-http2#fix-return-value
+322 silly lockFile 3fa0addf-ntjs-node-http2-fix-return-value https://github.com/gruntjs/node-http2#fix-return-value
+323 verbose about to build /home/preetesh/Desktop/notix-hybrid/node_modules/grunt-contrib-connect
+324 info /home/preetesh/Desktop/notix-hybrid/node_modules/grunt-contrib-connect unbuild
+325 info preuninstall grunt-contrib-connect@1.0.1
+326 info uninstall grunt-contrib-connect@1.0.1
+327 verbose true,/home/preetesh/Desktop/notix-hybrid/node_modules,/home/preetesh/Desktop/notix-hybrid/node_modules unbuild grunt-contrib-connect@1.0.1
+328 info postuninstall grunt-contrib-connect@1.0.1
+329 error Error: ENOENT, open '/home/preetesh/tmp/npm-8638-kRJbdCoc/1459698169297-0.6809089840389788/package/package.json'
+330 error If you need help, you may report this log at:
+330 error     <http://github.com/isaacs/npm/issues>
+330 error or email it to:
+330 error     <npm-@googlegroups.com>
+331 error System Linux 3.19.0-32-generic
+332 error command "/usr/bin/nodejs" "/usr/bin/npm" "install" "grunt-contrib-connect"
+333 error cwd /home/preetesh/Desktop/notix-hybrid
+334 error node -v v0.10.25
+335 error npm -v 1.3.10
+336 error path /home/preetesh/tmp/npm-8638-kRJbdCoc/1459698169297-0.6809089840389788/package/package.json
+337 error code ENOENT
+338 error errno 34
+339 verbose exit [ 34, true ]
