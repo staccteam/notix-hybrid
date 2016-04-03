@@ -20,7 +20,6 @@ var app = {
     // Application Constructor
     initialize: function() {
         this.bindEvents();
-        window.location = '/main.html';
     },
     // Bind Event Listeners
     //
