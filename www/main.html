@@ -244,7 +244,7 @@
     var router = new AppRouter();
     router.on('route:home', function () {
 
-        router.navigate('notifications', {trigger: true});
+        router.navigate('/notifications', {trigger: true});
     });
     router.on('route:notifications', function () {
         $('.button-collapse').click();          // Hide the Navbar
