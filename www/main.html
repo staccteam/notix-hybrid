@@ -3,11 +3,15 @@
 <head>
     <title>Notix</title>
 
-    <!-- Compiled and minified CSS -->
+    <!-- Compiled and minified Materialize CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+    <!-- Fontawesome -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.css">
+    <!-- User Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="css/main.min.css">
 </head>
 <body>
-
+    <div class="main-window"></div>
     <div class="container"></div>
 
     <script src="https://code.jquery.com/jquery-2.2.2.min.js" integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI=" crossorigin="anonymous"></script>
@@ -16,13 +20,246 @@
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
 
-    <script type="text/template" id="search_template">
-
+<!----------------------- SideBar Template------------------ -->
+    <script type="text/template" id="sideNavBar_template">
+    <nav class="fixed">
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo"><%= title %></a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="fa fa-list"></i></a>
+      <ul class="side-nav fixed" id="mobile-demo">
+        <li><a href="#/notifications">Notifications</a></li>
+        <li><a href="#/attachments">Attachments</a></li>
+        <li><a href="#/departments">Departments</a></li>
+        <li><a href="#/syllabus">Syllabus</a></li>
+      </ul>
+    </div>
+  </nav>
     </script>
 
+<!------------------- Notification Template--------------------------- -->
+    <script type="text/template" id="notification_template">
+        <div class="row">
+            <h3>Notifications</h3>
+        </div>
 
+        <div class="row">
+            <div class="collection notifications-list" >
+                <% notifications.each(function(notification){ %>
+
+                <a href="#/notification/<%= notification.get('id') %>" class="collection-item">
+                    
+                        <p class="pull-left"><%= notification.get('date_posted') %></p>
+                        <p class="collection-item-header"><%= notification.get('author') %><p>
+                        <p class="collection-item-paragraph"><%= notification.get('summary') %></p>
+
+                </a>
+
+                <% }) %>
+            </div>
+        </div>
+    </script>
+
+<!-- ------------ View Notification Template --------------------------- -->
+<script src="text/template" id="view_notification_template">
+    <div class="row">
+        <div class="col s12">
+            <% notification.each(function (n){ %>
+                <h3><%= n.get('heading') %></h3>
+                <p><%= n.get('content') %></p>
+            <% }) %>
+        </div>
+    </div>
+</script>
+
+<!-- ------------ Register Template --------------------------- -->
+<script type="text/template">
+    <div class="container">
+        <div class="row">
+            <form class="col s12">
+                  <div class="row">
+                    <div class="input-field col s6">
+                      <input placeholder="Placeholder" name="first_name" id="first_name" type="text" class="validate">
+                      <label for="first_name">First Name</label>
+                    </div>
+                    <div class="input-field col s6">
+                      <input id="last_name" type="text" name="last_name" class="validate">
+                      <label for="last_name">Last Name</label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <input type="text" name="mobile" id="mobile" class="validate">
+                      <label for="mobile">Mbile</label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <input id="email" type="email" class="validate">
+                      <label for="email">Email</label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <input id="enrollment" type="email" name="enrollment" class="validate">
+                      <label for="enrollment">RGPV Enrollment Number</label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <input id="password" type="password" name="password" class="validate">
+                      <label for="password">Password</label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <input type="submit" id="register_btn" value="Register" />
+                    </div>
+                  </div>
+                  
+                </form>
+        </div>
+    </div>
+</script>
+
+<!-- ------------ Login Template --------------------------- -->
+
+
+<!-- ------------ Pre-Loader Template --------------------------- -->
+<script type="text/template" id="preloader_template">
+    <div class="center-align v-center">
+        <div class="preloader-wrapper big active">
+        <div class="spinner-layer spinner-blue-only">
+          <div class="circle-clipper left">
+            <div class="circle"></div>
+          </div><div class="gap-patch">
+            <div class="circle"></div>
+          </div><div class="circle-clipper right">
+            <div class="circle"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+</script>
+
+
+<!---------------- MAIN SCRIPT -------------------------- -->
+    
     <script type="text/javascript">
+
+    var $preloader = _.template($('#preloader_template').html());
+
+    $.ajaxPrefilter(function( options, originalOptions, jqXHR ) {
+        // Modify options, control originalOptions, store jqXHR, etc
+        options.url = "http://www.varunshrivastava.in/" + options.url;
+    });
+
+    var NotificationModel = Backbone.Collection.extend({
         
+    });
+
+    // Side Nav View
+        var SideNavBar = Backbone.View.extend({
+            initialize: function () {
+                
+            },
+            render: function (options) {
+                var template = _.template ($('#sideNavBar_template').html());
+                this.$el.html(template (options));
+            },
+            events: {
+                "click .button-collapse":"addEventListener"
+            },
+            addEventListener: function (event) {
+                event.preventDefault();
+                $('.button-collapse').sideNav();
+            }
+        });
+        var sideNav = new SideNavBar({el: $(".main-window")});
+        sideNav.render({title: "HCET Notix"});
+
+    // Notification View
+        var Notification = Backbone.View.extend({
+            initialize: function () {
+
+            },
+            render: function () {
+                this.$el.html($preloader);          // Preloader
+                that = this;
+                var notifications = new NotificationModel();
+                notifications.url = "site/getAsyncBlogs";
+                notifications.fetch({
+                    success: function (data) {
+                        console.log(data);
+                        var variables = {notifications: data};
+                        var template = _.template ($ ('#notification_template').html());
+                        that.$el.html(template (variables));
+                    }
+                });
+            },
+            fetchNotificationById: function (id) {
+                this.$el.html($preloader);          // Preloader
+                sideNav.render({title: "Notification"});
+                that = this;
+                var notification = new NotificationModel();
+                notification.url = 'site/getBlog/'+id;
+                notification.fetch({
+                    success: function (data){
+                        console.log(data);
+                        var variables = {notification: data};
+                        var template = _.template( $('#view_notification_template').html());
+                        that.$el.html(template(variables));
+                    }
+                });
+            }
+        })
+        var notification = new Notification({el: $('.container')});
+
+
+    // Register View
+        var RegisterView = Backbone.View.extend({
+            initialize: function () {
+
+            },
+            render: function (){
+                this.$el.html($preloader);          // Preloader
+                var template = _.template( $('#register_template').html());
+                this.$el.html( template);
+            }
+        });
+        var registerView = new RegisterView({el: $('.container')});
+
+
+
+
+    // Application Router Section
+    var AppRouter = Backbone.Router.extend({
+        routes: {
+            "":"home",
+            "register":"register",
+            "notifications":'notifications',
+            "notification/:blogId":'notification'
+        },
+    });
+
+    var router = new AppRouter();
+    router.on('route:home', function () {
+
+        router.navigate('notifications', {trigger: true});
+    });
+    router.on('route:notifications', function () {
+        $('.button-collapse').click();          // Hide the Navbar
+        notification.render();
+    });
+    router.on('route:notification', function (blogId) {
+        console.log(blogId);
+        notification.fetchNotificationById(blogId);
+    });
+    router.on('route:register', function () {
+        registerView.render();
+    })
+
+    Backbone.history.start();
+
     </script>
 
 </body>
