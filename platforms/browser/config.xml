@@ -2,7 +2,7 @@
 <widget id="com.phonegap.notix" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>notix</name>
     <description>A Notification Platform for Hitkarini College of Engineering and Technology</description>
-    <author email="varunshrivastava007@gmail.com" href="http://phonegap.com">stacc. team</author>
+    <author email="varunshrivastava007@gmail.com" href="http://phonegap.com">stacc.</author>
     <content src="index.html" />
     <preference name="permissions" value="none" />
     <preference name="orientation" value="default" />

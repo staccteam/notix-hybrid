@@ -6,18 +6,16 @@ module.exports = function(grunt) {
         jshint: {
             all: [
                 'Gruntfile.js',
-                '/www/js/*.js',
-                '/www/js/admin/*.js'
+                'www/js/*.js',
+                'www/js/admin/*.js'
             ]
         },
 
         uglify: {
             build: {
                 files: {
-                    '/www/js/build/admin/main.min.js': ['/www/js/admin/main.js'],
-                    '/www/js/build/admin/plugins.min.js': ['/www/js/admin/plugins.js'],
-                    '/www/www/js/build/main.min.js': ['/www/www/js/main.js'],
-                    '/www/js/build/plugins.min.js': ['/www/js/plugins.js']
+                    'www/www/js/build/main.min.js': ['www/www/js/main.js'],
+                    'www/js/build/plugins.min.js': ['www/js/plugins.js']
                 }
             }
         },
@@ -42,8 +40,7 @@ module.exports = function(grunt) {
                     style:'compressed'
                 },
                 files:{
-                    '/www/css/build/style.css':'/www/css/style.scss',
-                    '/www/css/build/admin/style.css':'/www/css/admin/style.scss'
+                    'www/css/build/style.css':'www/css/style.scss'
                 }
             }
         },
@@ -61,7 +58,7 @@ module.exports = function(grunt) {
                 ]
             },
             dist:{
-                src: ['/www/css/build/style.css', '/www/css/build/admin/style.css']
+                src: ['www/css/build/style.css']
             }
         },
 
@@ -71,10 +68,8 @@ module.exports = function(grunt) {
             },
             js: {
                 files: [
-                    '/www/js/admin/plugins.js',
-                    '/www/js/admin/main.js',
-                    '/www/js/plugins.js',
-                    '/www/js/main.js'
+                    'www/js/plugins.js',
+                    'www/js/main.js'
                 ],
                 tasks: [
                     'jshint', 'uglify'
@@ -82,14 +77,12 @@ module.exports = function(grunt) {
             },
             css: {
                 files: [
-                    '/www/css/admin/style.scss',
-                    '/www/css/admin/main.sass',
-                    '/www/css/style.scss',
-                    '/www/css/main.sass',
-                    '/www/css/_animations.sass',
-                    '/www/css/_fonts.sass',
-                    '/www/css/_bits.sass',
-                    '/www/css/_base.sass'
+                    'www/css/style.scss',
+                    'www/css/main.sass',
+                    'www/css/_animations.sass',
+                    'www/css/_fonts.sass',
+                    'www/css/_bits.sass',
+                    'www/css/_base.sass'
                 ],
                 tasks: [
                     'sass', 'postcss'
@@ -107,21 +100,6 @@ module.exports = function(grunt) {
                 }
             }
         },
-        
-        // browser-sync allows you to debug sites on your phone.
-        // more info at http://browsersync.io 
-        //
-        // Below is the dummy browser-sync Grunt task:
-        //  browserSync: {
-        //     dev: {                
-        //         options: {
-        //             server: 'localhost/projects/project-name/'
-        //         }
-        //     }
-        // },
-        //
-        // ALTERNATIVELY ENTER THIS IN THE PROJECT DIR TERMINAL:
-        // browser-sync start --proxy localhost/projects/project-name/
 
     });
     require('es6-promise').polyfill();
@@ -137,8 +115,4 @@ module.exports = function(grunt) {
 
     grunt.registerTask('default', ['jshint', 'uglify', 'sass', 'postcss']);
     grunt.registerTask('serve', ['connect:server', 'watch']);
-
-    // Uncomment lines below to register browser-sync tasks.
-    // grunt.registerTask('bs', 'browserSync');
-    // grunt.registerTask('bs-watch', ['browserSync', 'watch']);
 };
