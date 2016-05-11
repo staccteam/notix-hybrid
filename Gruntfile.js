@@ -6,15 +6,14 @@ module.exports = function(grunt) {
         jshint: {
             all: [
                 'Gruntfile.js',
-                'www/js/*.js',
-                'www/js/admin/*.js'
+                'www/js/*.js'
             ]
         },
 
         uglify: {
             build: {
                 files: {
-                    'www/www/js/build/main.min.js': ['www/www/js/main.js'],
+                    'www/js/build/main.min.js': ['www/js/main.js'],
                     'www/js/build/plugins.min.js': ['www/js/plugins.js']
                 }
             }

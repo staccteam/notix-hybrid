@@ -9,6 +9,10 @@
     "installed_plugins": {
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.hcet.notix"
+        },
+        "phonegap-plugin-push": {
+            "SENDER_ID": "72429857274",
+            "PACKAGE_NAME": "com.hcet.notix"
         }
     },
     "dependent_plugins": {}

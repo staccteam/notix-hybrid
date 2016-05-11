@@ -1,0 +1,104 @@
+// RESPONSIVE BREAKPOINTS
+$break-laptop: 1366px
+$break-large: 1200px
+$break-small: 900px
+$skeleton-bp: 768px
+$break-650: 650px
+$break-520: 520px
+$break-470: 470px
+$break-420: 420px
+
+=pmr()
+    padding: 0
+    margin: 0
+
+=word-wrap()
+    overflow-wrap: break-word
+    word-wrap: break-word
+    -ms-word-break: break-all
+    word-break: break-word
+    -ms-hyphens: auto
+    -moz-hyphens: auto
+    -webkit-hyphens: auto
+    hyphens: auto
+
+=bp($bpx)
+    @media screen and (max-width: $bpx)
+        @content
+
+=vh-center($position: absolute)
+    position: $position
+    top: 50%
+    left: 50%
+    margin-right: -50%
+    transform: translate(-50%, -50%)
+
+=v-center($position: relative)
+    position: $position
+    top: 50%
+    transform: translateY(-50%)
+
+=h-center($position: absolute)
+    position: $position
+    left: 50%
+    transform: translateX(-50%)
+
+=db($color: red, $style: solid)
+    // db: debug border
+    // border for block debugging and CSS block model
+    border: 2px $style $color
+
+// use for slant edges
+// http://www.viget.com/articles/angled-edges-with-css-masks-and-transforms
+=angle($pseudo, $flip: false, $angle: 1.5deg)
+    // Possible values for $pseudo are: before, after, both
+    @if $pseudo == "before" or $pseudo == "after" or $pseudo == "both"
+        position: relative
+        z-index: 1
+        $selector: if($pseudo == "both", "&:before,&:after", "&:#{$pseudo}")
+        #{$selector}
+            background: inherit
+            content: ''
+            display: block
+            height: 50%
+            left: 0
+            position: absolute
+            right: 0
+            z-index: -1
+            -webkit-backface-visibility: hidden
+            // for Chrome Windows
+        @if $pseudo == "before"
+            #{$selector}
+                top: 0
+                @if $flip
+                    transform: skewY($angle * -1)
+                    transform-origin: 0 0
+                @else
+                    transform: skewY($angle)
+                    transform-origin: 100% 0
+        @if $pseudo == "after"
+            #{$selector}
+                bottom: 0
+                @if $flip
+                    transform: skewY($angle)
+                    transform-origin: 0 100%
+                @else
+                    transform: skewY($angle * -1)
+                    transform-origin: 100%
+        @if $pseudo == "both"
+            &:before
+                top: 0
+                @if $flip
+                    transform: skewY($angle * -1)
+                    transform-origin: 0 0
+                @else
+                    transform: skewY($angle)
+                    transform-origin: 100% 0
+            &:after
+                bottom: 0
+                @if $flip
+                    transform: skewY($angle)
+                    transform-origin: 0 0
+                @else
+                    transform: skewY($angle * -1)
+                    transform-origin: 100%
