@@ -32,19 +32,20 @@
 <!-- Notification Template -->
     <script type="text/template" id="notification_template">
         <div class="row">
-            <h3>Notifications</h3>
+            <h4>Notifications</h4>
         </div>
         <div class="row">
-            <div class="collection notifications-list" >
-                <% notifications.each(function(notification){ %>
-                    <a href="#/notification/single/<%= notification.get('id') %>" class="collection-item">
-                        <p class="pull-left"><%= notification.get('title') %></p>
-                        <p class="collection-item-header"><%= notification.get('created_at') %><p>
-                        <p class="collection-item-paragraph"><%= notification.get('message') %></p>
-                    </a>
-                <% }) %>
+        <% notifications.each(function(notification){ %>
+        <div class="col s12">
+          <div class="card darken-1">
+            <div class="card-content">
+              <span class="card-title"><h5><%= notification.get('title') %></h5></span>
+              <p><%= notification.get('message') %></p>
             </div>
+          </div>
         </div>
+        <% }) %>
+      </div>
     </script>
 
 <!--  View Notification Template  -->
