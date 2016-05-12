@@ -22,7 +22,7 @@
                 <a href="#" class="brand-logo"><%= title %></a>
                 <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="fa fa-bars"></i></a>
                 <ul class="side-nav fixed" id="mobile-demo">
-                    <li><a href="#/notifications">Notifications</a></li>
+                    <li><a href="#/notifications/">Notifications</a></li>
                     <li><a href="student-register.html">Register Student</a></li>
                 </ul>
             </div>
@@ -37,10 +37,10 @@
         <div class="row">
             <div class="collection notifications-list" >
                 <% notifications.each(function(notification){ %>
-                    <a href="#/notification/<%= notification.get('id') %>" class="collection-item">
-                        <p class="pull-left"><%= notification.get('date_posted') %></p>
-                        <p class="collection-item-header"><%= notification.get('author') %><p>
-                        <p class="collection-item-paragraph"><%= notification.get('summary') %></p>
+                    <a href="#/notification/single/<%= notification.get('id') %>" class="collection-item">
+                        <p class="pull-left"><%= notification.get('title') %></p>
+                        <p class="collection-item-header"><%= notification.get('created_at') %><p>
+                        <p class="collection-item-paragraph"><%= notification.get('message') %></p>
                     </a>
                 <% }) %>
             </div>
@@ -136,9 +136,11 @@
 
     var $preloader = _.template($('#preloader_template').html());
 
+    // Root Domain to passrequest to
     $.ajaxPrefilter(function( options, originalOptions, jqXHR ) {
         // Modify options, control originalOptions, store jqXHR, etc
         options.url = "http://hcetnotix.azurewebsites.net/" + options.url;
+        // options.url = "http://localhost/projects/notix-website/" + options.url;
     });
 
     var NotificationModel = Backbone.Collection.extend({
@@ -174,7 +176,7 @@
                 this.$el.html($preloader);          // Preloader
                 that = this;
                 var notifications = new NotificationModel();
-                notifications.url = "site/getAsyncBlogs";
+                notifications.url = "process/getNotifications/0/json";
                 notifications.fetch({
                     success: function (data) {
                         console.log(data);
@@ -189,7 +191,7 @@
                 sideNav.render({title: "Notification"});
                 that = this;
                 var notification = new NotificationModel();
-                notification.url = 'site/getBlog/'+id;
+                notification.url = 'process/getSingleNotification/'+id;
                 notification.fetch({
                     success: function (data){
                         console.log(data);
@@ -225,7 +227,7 @@
             "":"home",
             "register":"register",
             "notifications":'notifications',
-            "notification/:blogId":'notification'
+            "notification/single/:notId":'notification'
         },
     });
 
@@ -237,10 +239,13 @@
     router.on('route:notifications', function () {
         $('.button-collapse').click();          // Hide the Navbar
         notification.render();
+        setInterval(function () {
+            notification.render();
+        }, 10000); 
     });
-    router.on('route:notification', function (blogId) {
-        console.log(blogId);
-        notification.fetchNotificationById(blogId);
+    router.on('route:notification', function (notId) {
+        console.log(notId);
+        notification.fetchNotificationById(notId);
     });
     router.on('route:register', function () {
         registerView.render();
