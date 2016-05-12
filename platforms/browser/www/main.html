@@ -52,8 +52,8 @@
     <div class="row">
         <div class="col s12">
             <% notification.each(function (n){ %>
-                <h3><%= n.get('heading') %></h3>
-                <p><%= n.get('content') %></p>
+                <h3><%= n.get('title') %></h3>
+                <p><%= n.get('message') %></p>
             <% }) %>
         </div>
     </div>
