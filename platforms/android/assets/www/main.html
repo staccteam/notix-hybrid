@@ -22,7 +22,7 @@
                 <a href="#" class="brand-logo"><%= title %></a>
                 <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="fa fa-bars"></i></a>
                 <ul class="side-nav fixed" id="mobile-demo">
-                    <li><a href="#/notifications/">Notifications</a></li>
+                    <li><a href="#/">Notifications</a></li>
                     <li><a href="student-register.html">Register Student</a></li>
                 </ul>
             </div>
@@ -219,7 +219,7 @@
 
 
 
-
+    var refreshIntervalId = null;
     // Application Router Section
     var AppRouter = Backbone.Router.extend({
         routes: {
@@ -238,13 +238,14 @@
     router.on('route:notifications', function () {
         $('.button-collapse').click();          // Hide the Navbar
         notification.render();
-        setInterval(function () {
+        refreshIntervalId = setInterval(function () {
             notification.render();
         }, 10000); 
     });
     router.on('route:notification', function (notId) {
         console.log(notId);
         notification.fetchNotificationById(notId);
+        clearInterval(refreshIntervalId);
     });
     router.on('route:register', function () {
         registerView.render();
