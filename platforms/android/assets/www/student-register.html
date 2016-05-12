@@ -50,60 +50,62 @@
 <!-- <h1>Push Notification Example</h1>
 Your GCM ID : <br/>
 <p id="gcm_id"></p> -->
-  <div class="row">
-    <form id="studentRegForm" action="http://hcetnotix.azurewebsites.net/process/registerUser" method="post" class="col s12">
+  <div class="container">
       <div class="row">
-        <div class="input-field col s6">
-          <input id="first_name" name="first_name" type="text" class="validate">
-          <label for="first_name">First Name</label>
-        </div>
-        <div class="input-field col s6">
-          <input id="last_name" type="text" name="last_name" class="validate">
-          <label for="last_name">Last Name</label>
-        </div>
+        <form id="studentRegForm" action="http://hcetnotix.azurewebsites.net/process/registerUser" method="post" class="col s12">
+          <div class="row">
+            <div class="input-field col s6">
+              <input id="first_name" name="first_name" type="text" class="validate">
+              <label for="first_name">First Name</label>
+            </div>
+            <div class="input-field col s6">
+              <input id="last_name" type="text" name="last_name" class="validate">
+              <label for="last_name">Last Name</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="password" type="password" name="password" class="validate">
+              <label for="password">Password</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="email" type="email" name="email" class="validate">
+              <label for="email">Email</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="mobile" type="text" name="mobile" class="validate">
+              <label for="mobile">Mobile</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="enrollment" type="text" name="enrollment" class="validate">
+              <label for="enrollment">Enrollment</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="branch" type="text" name="branch" class="validate">
+              <label for="branch">Branch</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="device_gcm_id" type="hidden" name="device_gcm_id" class="validate">
+              <label for="device_gcm_id"></label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+                <input type="submit" class="waves-effect waves-light btn" value="Submit" />
+            </div>
+          </div>
+        </form>
       </div>
-      <div class="row">
-        <div class="input-field col s12">
-          <input id="password" type="password" name="password" class="validate">
-          <label for="password">Password</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s12">
-          <input id="email" type="email" name="email" class="validate">
-          <label for="email">Email</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s12">
-          <input id="mobile" type="text" name="mobile" class="validate">
-          <label for="mobile">Mobile</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s12">
-          <input id="enrollment" type="text" name="enrollment" class="validate">
-          <label for="enrollment">Enrollment</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s12">
-          <input id="branch" type="text" name="branch" class="validate">
-          <label for="branch">Branch</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s12">
-          <input id="device_gcm_id" type="hidden" name="device_gcm_id" class="validate">
-          <label for="device_gcm_id"></label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s12">
-            <input type="submit" class="waves-effect waves-light btn" value="Submit" />
-        </div>
-      </div>
-    </form>
   </div>
         
 

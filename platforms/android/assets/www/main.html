@@ -8,12 +8,12 @@
     <div class="main-window"></div>
     <div class="container"></div>
     <script type="text/javascript" src="cordova.js"></script>
-    <script type="text/javascript" src="js/libs/jquery-1.12.0.min.js"></script>
+    <script type="text/javascript" src="js/libs/jquery-1.12.2.min.js"></script>
     <script type="text/javascript" src="js/libs/underscore-min.js"></script>
     <script type="text/javascript" src="js/libs/backbone-min.js"></script>
     <script type="text/javascript" src="js/libs/materialize.min.js"></script>
     <script type="text/javascript" src="js/build/plugins.min.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/build/main.min.js"></script>
 
 <!-- SideBar Template -->
     <script type="text/template" id="sideNavBar_template">
@@ -103,7 +103,6 @@
                       <input type="submit" id="register_btn" value="Register" />
                     </div>
                   </div>
-                  
                 </form>
         </div>
     </div>
@@ -176,7 +175,7 @@
                 this.$el.html($preloader);          // Preloader
                 that = this;
                 var notifications = new NotificationModel();
-                notifications.url = "process/getNotifications/0/json";
+                notifications.url = "process/getNotifications/json";
                 notifications.fetch({
                     success: function (data) {
                         console.log(data);
