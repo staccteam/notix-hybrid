@@ -1,10 +1,81 @@
-.brand-logo
-    text-transform: none
-    font-size: 0.9em
-    left: 0
+.appbar
+    .material-icons
+        font-size: 1.6rem !important
 
-.button-collapse
-    padding-left: 16px
-    color: #1d1057
-    .fa
-        font-size: 1.2em
+    .button-collapse
+        position: absolute
+        left: 1rem
+        color: $darktheme-color
+        &:hover
+            color: $darktheme-color
+            cursor: default
+    
+    &__title
+        position: absolute
+        left: 3.5rem
+
+    &__actionBtns
+        position: absolute
+        right: 1rem
+        display: inline
+        *
+            +pmr()
+            display: inline
+            color: $darktheme-color
+
+    .side-nav
+        font-size: 0.875rem
+        *
+            +pmr()
+        &__items
+            .active
+                background-color: transparent
+                color: $active-orange !important
+            hr
+                margin: 0.25rem 0
+            li
+                position: relative
+                color: $app-grey
+                height: 3rem
+                a
+                    +pmr()
+                    left: 1rem
+                    color: inherit
+                    +v-center()
+                .material-icons, p
+                    +v-center(absolute)
+                    display: inline
+                p
+                    left: 3.5rem
+
+        &__header
+            position: relative
+            min-height: 12rem
+            background: #eeeeee url('http://i.imgur.com/03j5Brq.jpg') no-repeat center
+            *
+                +pmr()
+                line-height: 1
+            .overlay
+                background-color: black
+                opacity: 0.5
+                position: absolute
+                z-index: 1
+                width: 100%
+                height: 100%
+            .avatar
+                position: absolute
+                z-index: 2
+                width: 4rem
+                border-radius: 50%
+                top: 1rem
+                left: 1rem
+            .status-bar
+                z-index: 2
+                position: absolute
+                bottom: 1rem
+                left: 1rem
+                min-height: 1.5rem
+                *
+                    padding-bottom: 0.5rem
+                .student-name
+                    font-weight: bold
