@@ -2,7 +2,7 @@
     .material-icons
         font-size: 1.6rem !important
 
-    .button-collapse
+    .left-btn
         position: absolute
         left: 1rem
         color: $darktheme-color
@@ -13,6 +13,7 @@
     &__title
         position: absolute
         left: 3.5rem
+        font-size: 1.3rem
 
     &__actionBtns
         position: absolute
@@ -51,7 +52,7 @@
         &__header
             position: relative
             min-height: 12rem
-            background: #eeeeee url('http://i.imgur.com/03j5Brq.jpg') no-repeat center
+            background: #eeeeee url('../../img/hcet.jpg') no-repeat center
             *
                 +pmr()
                 line-height: 1
@@ -79,3 +80,73 @@
                     padding-bottom: 0.5rem
                 .student-name
                     font-weight: bold
+
+.notix-logo svg
+    width: 50%
+    padding: 0 !important
+
+.namaste-screen
+    background: $theme-color
+    position: relative
+    width: 100%
+    height: 100%
+    color: white
+    line-height: 1.2
+    .container
+        +vh-center()
+        overflow: auto
+        padding: 1rem 0
+        width: 90%
+        text-align: center
+    div, p
+        font-size: 1.3rem
+    *
+        +pmr()
+        padding-bottom: 2rem
+
+.login-screen
+    text-align: center
+    .container
+        margin-top: 2rem
+    &__form
+        text-align: left
+        +h-center()
+        width: 80%
+        padding: 1rem 0
+        .input-field
+            border: none
+    &--btns
+        +pmr()
+        text-align: center
+        width: 100%
+        position: fixed
+        bottom: 0
+        input, a
+            border-top: 1px solid #ccc
+            padding: 1.5rem 0 !important
+            margin: 0 !important
+            line-height: 0.5
+
+.register-screen
+    text-align: center
+    .container
+        margin-top: 1rem
+    &__form
+        text-align: left
+        width: 100%
+        *
+            +pmr()
+        .input-field .prefix.active, .input-field input:focus + label
+            color: $active-orange
+        .input-field .prefix
+            color: $lightapp-grey
+
+        .input-field input:focus, .input-field input.valid
+            border-bottom: 1px solid $active-orange
+            box-shadow: 0 1px 0 0 $active-orange
+
+        .input-field select
+            color: $lightapp-grey !important
+            
+        .select-wrapper input.select-dropdown
+            color: #9e9e9e !important

@@ -1,5 +1,4 @@
 @import 'libs/_normalize';
-@import 'libs/_skeleton';
 @import 'libs/_materialize.scss';
 
 // Don't compile font-awesome sass version as it will not encode properly.
@@ -109,7 +108,6 @@ textarea {
 @import '_bits';
 @import '_base';
 @import '_animations';
-// @import '../index.css';
 
 @import 'main';
 
