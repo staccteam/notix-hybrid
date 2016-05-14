@@ -1,3 +1,5 @@
 $(function() {
-    $(".button-collapse").sideNav();    
+
+    
+
 });

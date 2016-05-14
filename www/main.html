@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
     <title>HCET Notix</title>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
     <link rel="stylesheet" type="text/css" href="css/build/style.css">
 </head>
 <body>
@@ -9,21 +12,49 @@
     <div class="container"></div>
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/libs/jquery-1.12.2.min.js"></script>
-    <script type="text/javascript" src="js/libs/underscore-min.js"></script>
-    <script type="text/javascript" src="js/libs/backbone-min.js"></script>
     <script type="text/javascript" src="js/libs/materialize.min.js"></script>
-    <script type="text/javascript" src="js/build/plugins.min.js"></script>
-    <script type="text/javascript" src="js/build/main.min.js"></script>
 
 <!-- SideBar Template -->
     <script type="text/template" id="sideNavBar_template">
-        <nav class="fixed">
+        <nav class="appbar navbar-fixed">
             <div class="nav-wrapper deep-purple">
-                <a href="#" class="brand-logo"><%= title %></a>
-                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="fa fa-bars"></i></a>
-                <ul class="side-nav fixed" id="mobile-demo">
-                    <li><a href="#/">Notifications</a></li>
-                    <li><a href="student-register.html">Register Student</a></li>
+                <a href="#" data-activates="notix-sidenav" class="button-collapse"><i class="material-icons">menu</i></a>
+                <span class="appbar__title"><%= title %></span>
+                <ul class="appbar__actionBtns">
+                    <li><a href="#/refresh"><i class="material-icons">refresh</i></a></li>
+                </ul>
+                <ul class="side-nav fixed" id="notix-sidenav">
+                    <div class="side-nav__header">
+                        <!-- <div class="bg"></div> -->
+                        <div class="overlay"></div>
+                        <img src="https://pbs.twimg.com/profile_images/678638182351568897/Uss0HwCu.jpg" class="avatar">
+                        <div class="status-bar">
+                            <p class="student-name">Preetesh Jain</p>
+                            <p class="student-detail">8th Semester, Computer Science</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <ul class="side-nav__items">
+                        <li class="active">
+                            <a class="waves-effect waves-grey" href="#/notifications">
+                                <i class="material-icons">notifications</i>
+                                <p>Notifications</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="waves-effect waves-grey" href="#/events">
+                                <i class="material-icons">events</i>
+                                <p>Events</p>
+                            </a>
+                        </li>
+                        <hr>
+                        <li>
+                            <a class="waves-effect waves-grey" href="#/about-hcet">
+                                <i class="material-icons">info</i>
+                                <p>About HCET</p>
+                            </a>
+                        </li>
+                    </ul>
                 </ul>
             </div>
         </nav>
@@ -32,19 +63,20 @@
 <!-- Notification Template -->
     <script type="text/template" id="notification_template">
         <div class="row">
-            <h3>Notifications</h3>
+            <h4>Notifications</h4>
         </div>
         <div class="row">
-            <div class="collection notifications-list" >
-                <% notifications.each(function(notification){ %>
-                    <a href="#/notification/single/<%= notification.get('id') %>" class="collection-item">
-                        <p class="pull-left"><%= notification.get('title') %></p>
-                        <p class="collection-item-header"><%= notification.get('created_at') %><p>
-                        <p class="collection-item-paragraph"><%= notification.get('message') %></p>
-                    </a>
-                <% }) %>
+        <% notifications.each(function(notification){ %>
+        <div class="col s12">
+          <div class="card darken-1">
+            <div class="card-content">
+              <span class="card-title"><h5><%= notification.get('title') %></h5></span>
+              <p><%= notification.get('message') %></p>
             </div>
+          </div>
         </div>
+        <% }) %>
+      </div>
     </script>
 
 <!--  View Notification Template  -->
@@ -129,10 +161,11 @@
 </script>
 
 
-<!-- MAIN SCRIPT -->
-    
+<script type="text/javascript" src="js/libs/underscore-min.js"></script>
+<script type="text/javascript" src="js/libs/backbone-min.js"></script>
+<script type="text/javascript" src="js/build/plugins.min.js"></script>
+<script type="text/javascript" src="js/build/main.min.js"></script>
 <script type="text/javascript">
-
     var $preloader = _.template($('#preloader_template').html());
 
     // Root Domain to passrequest to
@@ -160,7 +193,10 @@
             },
             addEventListener: function (event) {
                 event.preventDefault();
-                $('.button-collapse').sideNav();
+                $('.button-collapse').sideNav({
+                    menuWidth: '85%',
+                    closeOnClick: true
+                });
             }
         });
         var sideNav = new SideNavBar({el: $(".main-window")});
@@ -200,7 +236,7 @@
                     }
                 });
             }
-        })
+        });
         var notification = new Notification({el: $('.container')});
 
 
@@ -238,9 +274,9 @@
     router.on('route:notifications', function () {
         $('.button-collapse').click();          // Hide the Navbar
         notification.render();
-        refreshIntervalId = setInterval(function () {
-            notification.render();
-        }, 10000); 
+        // refreshIntervalId = setInterval(function () {
+        //     notification.render();
+        // }, 10000); 
     });
     router.on('route:notification', function (notId) {
         console.log(notId);
@@ -249,10 +285,9 @@
     });
     router.on('route:register', function () {
         registerView.render();
-    })
+    });
 
     Backbone.history.start();
-
 </script>
 
 </body>
