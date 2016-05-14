@@ -20,7 +20,40 @@
     </nav>
 
     <div class="container">
+
+        <div id="tipModal" class="modal bottom-sheet">
+            <div class="modal-content" style="text-align: left;">
+                <strong>Tip for Profile Pictures</strong>
+                <br><br>
+                <p>We strongly recommend you to use a square image, preferrably a 500px by 500px one.</p>
+            </div>
+            <div class="modal-footer">
+                <strong><a
+                    href="#!"
+                    class="modal-action modal-close waves-effect waves-grey deep-purple-text btn-flat">
+                    DISMISS
+                </a></strong>
+            </div>
+        </div>
+
         <form id="studentRegForm" class="register-screen__form" action="http://hcetnotix.azurewebsites.net/process/registerUser" method="post">
+            <div class="profile-pic--container">
+                <input id="picturePicker" class="hidden" name="student_dp" type="file" accept="image/*" onchange="loadFile(event)">
+                <div class="profile-pic" id="profilePic">
+                    <div class="avatar" id="profilePicPreview"></div>
+                    <div class="avatar overlay"></div>
+                    <div class="icon"><i class="material-icons">add_a_photo</i></div>
+                </div>
+                <script>
+                  var loadFile = function(event) {
+                    var output = document.getElementById('profilePicPreview');
+                    output.style.backgroundImage = "url(" + URL.createObjectURL(event.target.files[0]) + ")";
+                    output.style.backgroundPosition = "center";
+                    output.style.backgroundRepeat = "no-repeat";
+                    output.style.backgroundSize = "cover";
+                  };
+                </script>
+            </div>
             <div class="row">
                 <div class="input-field col s6">
                     <i class="material-icons prefix">person</i>

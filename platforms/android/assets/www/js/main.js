@@ -13,4 +13,9 @@ $(function() {
             $ip.material_select();
         }
     });
+
+    $('#profilePic').on('click', function() {
+        $('#tipModal').openModal();
+        $('#picturePicker').show().focus().click().hide();
+    });
 });
