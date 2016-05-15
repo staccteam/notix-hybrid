@@ -7,9 +7,9 @@
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
     <link rel="stylesheet" type="text/css" href="css/build/style.css">
 </head>
-<body>
+<body class="home-screen">
     <div class="main-window"></div>
-    <div class="container"></div>
+    <div class="home-screen-container"></div>
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/libs/jquery-1.12.2.min.js"></script>
     <script type="text/javascript" src="js/libs/materialize.min.js"></script>
@@ -67,21 +67,28 @@
 
 <!-- Notification Template -->
     <script type="text/template" id="notification_template">
-        <div class="row">
-            <h4>Notifications</h4>
-        </div>
-        <div class="row">
         <% notifications.each(function(notification){ %>
-        <div class="col s12">
-          <div class="card darken-1">
-            <div class="card-content">
-              <span class="card-title"><h5><%= notification.get('title') %></h5></span>
-              <p><%= notification.get('message') %></p>
-            </div>
-          </div>
-        </div>
+            <div class="waves-effect" style="padding-top: 1rem">
+                <div class="container notification-template">
+                    <div class="row">
+                        <div class="col s8">
+                            <p class="notification-template__title"><strong><% 
+                                if (notification.get('title').length > 100) { %>
+                                    <%= notification.get('title').substring(0, 100) + '...' %>
+                                <% } else { %>
+                                    <%= notification.get('title') %>
+                                <% }
+                            %></strong></p>
+                            <div class="grey-text"><%= notification.get('message').substring(0, 100) + '...' %></div>
+                        </div>
+                        <div class="col s4 notification-template--meta" style="text-align: right">
+                            <p class="notification-template__timestamp">Sept 21, 2015</p>
+                            <p class="notification-template__branchtag chip">CS</p>
+                        </div>
+                    </div>
+                </div>
+            </div><hr style="margin: 0">
         <% }) %>
-      </div>
     </script>
 
 <!--  View Notification Template  -->
@@ -100,17 +107,19 @@
 <!--  Pre-Loader Template  -->
 <script type="text/template" id="preloader_template">
     <div class="center-align v-center">
-        <div class="preloader-wrapper big active">
-        <div class="spinner-layer spinner-blue-only">
-          <div class="circle-clipper left">
-            <div class="circle"></div>
-          </div><div class="gap-patch">
-            <div class="circle"></div>
-          </div><div class="circle-clipper right">
-            <div class="circle"></div>
-          </div>
+        <div class="preloader-wrapper small active">
+            <div class="spinner-layer spinner-yellow-only">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div>
+                <div class="gap-patch">
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
 </script>
 
@@ -191,7 +200,7 @@
                 });
             }
         });
-        var notification = new Notification({el: $('.container')});
+        var notification = new Notification({el: $('.home-screen-container')});
 
 
     // Register View
@@ -205,7 +214,7 @@
                 this.$el.html( template);
             }
         });
-        var registerView = new RegisterView({el: $('.container')});
+        var registerView = new RegisterView({el: $('.home-screen-container')});
 
 
 

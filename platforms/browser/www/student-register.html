@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="format-detection" content="telephone=no">
+<meta name="msapplication-tap-highlight" content="no">
+<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+<title>Student Register</title>
+<script type="text/javascript" src="js/libs/jquery-1.12.2.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+<script type="text/javascript" src="cordova.js"></script>
+</head>
+<body>
+  <div class="container">
+      <div class="row">
+        <form id="studentRegForm" action="http://hcetnotix.azurewebsites.net/process/registerUser" method="post" class="col s12">
+          <div class="row">
+            <div class="input-field col s6">
+              <input id="first_name" name="first_name" type="text" class="validate">
+              <label for="first_name">First Name</label>
+            </div>
+            <div class="input-field col s6">
+              <input id="last_name" type="text" name="last_name" class="validate">
+              <label for="last_name">Last Name</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="password" type="password" name="password" class="validate">
+              <label for="password">Password</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="email" type="email" name="email" class="validate">
+              <label for="email">Email</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="mobile" type="text" name="mobile" class="validate">
+              <label for="mobile">Mobile</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="enrollment" type="text" name="enrollment" class="validate">
+              <label for="enrollment">Enrollment</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="branch" type="text" name="branch" class="validate">
+              <label for="branch">Branch</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="device_gcm_id" type="hidden" name="device_gcm_id" class="validate">
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+                <input type="submit" class="waves-effect waves-light btn" value="Submit" />
+            </div>
+          </div>
+        </form>
+      </div>
+  </div>
+        
+
+<script type="text/javascript">
+    document.addEventListener("deviceready", onDeviceReady, false);
+    function onDeviceReady() {
+        console.log("Device Ready")
+        var push = PushNotification.init({
+            "android": {
+                "senderID": "72429857274"
+            },
+            "ios": {
+                "alert": "true",
+                "badge": "true",
+                "sound": "true"
+            },
+            "windows": {}
+        });
+
+        push.on('registration', function(data) {
+            console.log(data.registrationId);
+            $("#device_gcm_id").val(data.registrationId);
+        });
+
+        push.on('notification', function(data) {
+            console.log(data.message);
+            alert(data.title + " Message: " + data.message);
+            // data.title,
+            // data.count,
+            // data.sound,
+            // data.image,
+            // data.additionalData
+        });
+
+        push.on('error', function(e) {
+            console.log(e.message);
+        });
+    }
+
+    $("#studentRegForm").submit(function(){
+        var url = $('#studentRegForm').attr('action');
+        var data = $(this).serialize();
+        $.ajax({
+            type: "GET",
+            url: url,
+            data: data,
+            success: function (data) {
+                console.log(data);
+            }
+        });
+    });
+
+</script>
+
+</body>
+</html>
