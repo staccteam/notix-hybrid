@@ -77,9 +77,9 @@
 <!-- Notification Template -->
     <script type="text/template" id="notification_template">
         <% notifications.each(function(notification){ %>
-            <div class="waves-effect" style="padding-top: 1rem">
+            <div class="waves-effect" style="width: 100%; padding-top: 1rem">
                 <div class="container notification-template">
-                    <div class="row">
+                    <div class="row" style="width: 100%">
                         <div class="col s8">
                             <p class="notification-template__title"><strong><% 
                                 if (notification.get('title').length > 50) { %>
