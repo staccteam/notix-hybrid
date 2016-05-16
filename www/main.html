@@ -25,7 +25,6 @@
                 </ul>
                 <ul class="side-nav fixed" id="notix-sidenav">
                     <div class="side-nav__header">
-                        <!-- <div class="bg"></div> -->
                         <div class="overlay"></div>
                         <img src="https://pbs.twimg.com/profile_images/678638182351568897/Uss0HwCu.jpg" class="avatar">
                         <div class="status-bar">
@@ -49,7 +48,12 @@
                         </li>
                         <li>
                             <a class="waves-effect waves-grey" href="signup.html">
-                                <p>Signup</p>
+                                <p>signup.html</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="waves-effect waves-grey" href="single.html">
+                                <p>single.html</p>
                             </a>
                         </li>
                         <hr>
@@ -57,6 +61,11 @@
                             <a class="waves-effect waves-grey" href="#/about-hcet">
                                 <i class="material-icons">info</i>
                                 <p>About HCET</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="waves-effect waves-grey" href="#/about-hcet">
+                                <p>About Notix</p>
                             </a>
                         </li>
                     </ul>
@@ -73,13 +82,13 @@
                     <div class="row">
                         <div class="col s8">
                             <p class="notification-template__title"><strong><% 
-                                if (notification.get('title').length > 100) { %>
-                                    <%= notification.get('title').substring(0, 100) + '...' %>
+                                if (notification.get('title').length > 50) { %>
+                                    <%= notification.get('title').substring(0, 50) + '...' %>
                                 <% } else { %>
                                     <%= notification.get('title') %>
                                 <% }
                             %></strong></p>
-                            <div class="grey-text"><%= notification.get('message').substring(0, 100) + '...' %></div>
+                            <div class="grey-text"><%= notification.get('message').substring(0, 40) + '...' %></div>
                         </div>
                         <div class="col s4 notification-template--meta" style="text-align: right">
                             <p class="notification-template__timestamp">Sept 21, 2015</p>
