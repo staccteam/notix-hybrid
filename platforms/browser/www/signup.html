@@ -68,7 +68,7 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="material-icons prefix">account_balance</i>
-                    <select id="studentRegForm_branchSelect" disabled="true" name="branch">
+                    <select id="studentRegForm_branchSelect" disabled="true" name="branch_id">
                         <option value="" disabled selected>Branch</option>
                     </select>
                 </div>
@@ -120,22 +120,42 @@
     <script type="text/javascript" src="js/build/plugins.min.js"></script>
     <script type="text/javascript" src="js/build/main.min.js"></script>
     <script type="text/javascript">
-        document.addEventListener("deviceready", onDeviceReady, false);
-        function onDeviceReady() {
-            console.log("Device Ready")
-            var push = PushNotification.init({
-                "android": {
-                    "senderID": "72429857274"
+        $(function(){
+            $('select').material_select();
+            $.ajax({
+                url:'http://hcetnotix.azurewebsites.net/process/getBranches',
+                type:'POST',
+                dataType: 'json',
+                success: function( json ) {
+                    $ip = $('#studentRegForm_branchSelect');
+                    $.each(json, function(i, value) {
+                        $('#studentRegForm_branchSelect').append('<option value=' + value.id + '>' + value.branch + '</option>');
+                    });
+                    $ip.prop("disabled", false);
+                    $ip.material_select();
                 }
             });
-            push.on('registration', function(data) {
-                console.log(data.registrationId);
-                $("#device_gcm_id").val(data.registrationId);
+            $('#profilePic').on('click', function() {
+                $('#tipModal').openModal();
+                $('#picturePicker').show().focus().click().hide();
             });
-            push.on('error', function(e) {
-                console.log(e.message);
-            });
-        }
+            document.addEventListener("deviceready", onDeviceReady, false);
+            function onDeviceReady() {
+                console.log("Device Ready");
+                var push = PushNotification.init({
+                    "android": {
+                        "senderID": "72429857274"
+                    }
+                });
+                push.on('registration', function(data) {
+                    console.log(data.registrationId);
+                    $("#device_gcm_id").val(data.registrationId);
+                });
+                push.on('error', function(e) {
+                    console.log(e.message);
+                });
+            }
+        });
     </script>
 </body>
 </html>
