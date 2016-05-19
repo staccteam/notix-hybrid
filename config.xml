@@ -49,6 +49,9 @@
     <gap:splash gap:platform="android" gap:qualifier="port-xhdpi" src="res/screen/android/screen-xhdpi.png" />
     <access origin="*" />
     <plugin name="cordova-plugin-whitelist" version="1" />
+    <plugin name="phonegap-plugin-push" spec="1.6.0">
+        <variable name="SENDER_ID" value="72429857274" />
+    </plugin>
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" />
