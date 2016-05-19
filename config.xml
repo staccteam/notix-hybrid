@@ -28,7 +28,7 @@
     <plugin name="org.apache.cordova.vibration" />
     <plugin name="cordova-plugin-whitelist"/>
     <plugin name="phonegap-plugin-push">
-        <variable name="SENDER_ID" value="XXXXXXX" />
+        <param name="SENDER_ID" value="XXXXXXX" />
     </plugin>
     <icon src="icon.png" />
     <icon gap:platform="android" gap:qualifier="ldpi" src="res/icon/android/ldpi.png" />
