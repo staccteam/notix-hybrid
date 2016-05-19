@@ -37,7 +37,7 @@
     <gap:plugin name="org.apache.cordova.network-information" />
     <gap:plugin name="org.apache.cordova.vibration" />
     <plugin name="cordova-plugin-whitelist" version="1" />
-    <plugin name="phonegap-plugin-push" source="npm" spec="~1.6.2">
+    <plugin name="phonegap-plugin-push">
         <variable name="SENDER_ID" value="72429857274" />
     </plugin>
     <icon src="icon.png" />
