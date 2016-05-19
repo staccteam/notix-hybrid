@@ -1,0 +1,226 @@
+.appbar
+    position: fixed
+    top: 0
+    .material-icons
+        font-size: 1.6rem !important
+
+    .left-btn
+        position: absolute
+        left: 1rem
+        color: $darktheme-color
+        &:hover
+            color: $darktheme-color
+            cursor: default
+    
+    &__title
+        position: absolute
+        left: 3.5rem
+        font-size: 1.3rem
+
+    &__actionBtns
+        position: absolute
+        right: 1rem
+        display: inline
+        *
+            +pmr()
+            display: inline
+            color: $darktheme-color
+
+    .side-nav
+        font-size: 0.875rem
+        *
+            +pmr()
+        &__items
+            .active
+                background-color: transparent
+                color: $active-orange !important
+            hr
+                margin: 0.25rem 0
+            li
+                position: relative
+                color: $app-grey
+                height: 3rem
+                a
+                    +pmr()
+                    left: 1rem
+                    width: 90%
+                    color: inherit
+                    +v-center()
+                .material-icons, p
+                    +v-center(absolute)
+                    display: inline
+                p
+                    left: 3.5rem
+
+        &__header
+            position: relative
+            min-height: 12rem
+            background: #eeeeee url('../../img/hcet.jpg') no-repeat center
+            *
+                +pmr()
+                line-height: 1
+            .overlay
+                background-color: black
+                opacity: 0.5
+                position: absolute
+                z-index: 1
+                width: 100%
+                height: 100%
+            .avatar
+                position: absolute
+                z-index: 2
+                width: 4rem
+                border-radius: 50%
+                top: 1rem
+                left: 1rem
+            .status-bar
+                z-index: 2
+                position: absolute
+                bottom: 1rem
+                left: 1rem
+                min-height: 1.5rem
+                *
+                    padding-bottom: 0.5rem
+                .student-name
+                    font-weight: bold
+
+.notix-logo svg
+    width: 50%
+    padding: 0 !important
+
+.namaste-screen
+    background: $theme-color
+    position: relative
+    width: 100%
+    height: 100%
+    color: white
+    line-height: 1.2
+    .container
+        +vh-center()
+        overflow: auto
+        padding: 1rem 0
+        width: 90%
+        text-align: center
+    div, p
+        font-size: 1.3rem
+    *
+        +pmr()
+        padding-bottom: 2rem
+
+.login-screen
+    text-align: center
+    .container
+        margin-top: 4rem
+    &__form
+        text-align: left
+        +h-center()
+        width: 80%
+        padding: 1rem 0
+        .input-field
+            border: none
+    &--btns
+        +pmr()
+        text-align: center
+        width: 100%
+        position: fixed
+        bottom: 0
+        input, a
+            border-top: 1px solid #ccc
+            padding: 1.5rem 0 !important
+            margin: 0 !important
+            line-height: 0.5
+
+.register-screen
+    text-align: center
+    .container
+        margin-top: 4.5rem
+        margin-bottom: 3rem
+    &__form
+        text-align: left
+        width: 100%
+        *
+            +pmr()
+        .row
+            margin-bottom: 0.5rem
+
+        .profile-pic--container
+            height: 10rem
+            margin-bottom: 2rem
+        .profile-pic
+            +h-center()
+            width: 10rem
+            height: 10rem
+            *
+                +vh-center(absolute)
+            .icon
+                z-index: 3
+                color: white
+                i
+                    font-size: 2rem
+            .overlay
+                background-color: black
+                opacity: 0.2
+                z-index: 2
+            .avatar
+                z-index: 1
+                width: 10rem
+                height: 10rem
+                border-radius: 50%
+                text-align: center
+
+        .input-field label
+            max-width: 70%
+        .input-field .prefix.active, .input-field input:focus + label
+            color: $active-orange
+        .input-field .prefix
+            color: $lightapp-grey
+
+        .input-field input:focus, .input-field input.valid
+            border-bottom: 1px solid $active-orange
+            box-shadow: 0 1px 0 0 $active-orange
+
+        .input-field select
+            color: $lightapp-grey !important
+
+        .select-wrapper input.select-dropdown
+            color: #9e9e9e !important
+
+
+.home-screen-container
+    margin-top: 4rem
+
+.notification-template
+    padding-bottom: 1rem
+    .row
+        +pmr()
+    &__title, &--meta p
+        margin-bottom: 0.5rem
+
+.single-appbar
+    position: fixed
+    top: 0
+    background-color: white
+    box-shadow: none
+    *
+        color: $lightapp-grey !important
+    &__actionBtns
+        font-size: 0.9rem !important
+        a
+            padding: 0
+            padding-left: 1rem
+            &:hover
+                background: transparent
+
+.dropdown-content
+    width: 60%
+
+.notification-content
+    padding-top: 2rem
+    &__title
+        margin-bottom: 2rem
+    &__avatar
+        +pmr()
+        width: 100%
+        height: 100%
+    &__content
+        margin-bottom: 3rem
