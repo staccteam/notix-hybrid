@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.hcet.notix" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>notix</name>
+<widget id="com.hcet.notix" version="1.1.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>HCET Notix</name>
     <description>A Notification Platform for Hitkarini College of Engineering and Technology</description>
     <author email="contact@stacc.co" href="http://stacc.co">Stacc Pvt. Ltd.</author>
     <content src="index.html" />
@@ -36,6 +36,10 @@
     <gap:plugin name="org.apache.cordova.media" />
     <gap:plugin name="org.apache.cordova.network-information" />
     <gap:plugin name="org.apache.cordova.vibration" />
+    <plugin name="cordova-plugin-whitelist" version="1" />
+    <plugin name="phonegap-plugin-push" source="npm" spec="~1.6.2">
+        <variable name="SENDER_ID" value="72429857274" />
+    </plugin>
     <icon src="icon.png" />
     <icon gap:platform="android" gap:qualifier="ldpi" src="res/icon/android/ldpi.png" />
     <icon gap:platform="android" gap:qualifier="mdpi" src="res/icon/android/mdpi.png" />
@@ -48,10 +52,6 @@
     <gap:splash gap:platform="android" gap:qualifier="port-hdpi" src="res/screen/android/screen-hdpi.png" />
     <gap:splash gap:platform="android" gap:qualifier="port-xhdpi" src="res/screen/android/screen-xhdpi.png" />
     <access origin="*" />
-    <plugin name="cordova-plugin-whitelist" version="1" />
-    <plugin name="phonegap-plugin-push" spec="1.6.0">
-        <variable name="SENDER_ID" value="72429857274" />
-    </plugin>
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" />
