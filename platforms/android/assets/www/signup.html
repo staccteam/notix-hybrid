@@ -14,7 +14,7 @@
             <a href="login.html" class="left-btn"><i class="material-icons">arrow_back</i></a>
             <span class="appbar__title">Sign Up</span>
             <ul class="appbar__actionBtns">
-                <li><a onclick="document.getElementById('studentRegForm').submit();" href="#"><i class="material-icons">check</i></a></li>
+                <li><a id="submitBtn"><i class="material-icons">check</i></a></li>
             </ul>
         </div>
     </nav>
@@ -101,18 +101,16 @@
                     <label for="password">Password</label>
                 </div>
             </div>
-            <div class="row">
+            <!-- <div class="row">
                 <div class="input-field col s12">
                     <i class="material-icons prefix"></i>
                     <input name="repeat-password" type="password" class="validate">
                     <label for="repeat-password">Re-enter Password</label>
                 </div>
-            </div>
+            </div> -->
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="material-icons prefix"></i>
-                    <input type="text" name="device_gcm_id" id="device_gcm_id">
-                    <label for="device_gcm_id">Device GCM ID</label>
+                    <input type="hidden" name="device_gcm_id" id="device_gcm_id">
                 </div>
             </div>
         </form>
@@ -121,10 +119,6 @@
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/libs/jquery-1.12.2.min.js"></script>
     <script type="text/javascript" src="js/libs/materialize.min.js"></script>
-    <script type="text/javascript" src="js/libs/underscore-min.js"></script>
-    <script type="text/javascript" src="js/libs/backbone-min.js"></script>
-    <script type="text/javascript" src="js/build/plugins.min.js"></script>
-    <script type="text/javascript" src="js/build/main.min.js"></script>
     <script type="text/javascript">
         $(function(){
             $('select').material_select();
@@ -133,7 +127,7 @@
                 type:'POST',
                 dataType: 'json',
                 success: function( json ) {
-                    $ip = $('#studentRegForm_branchSelect');
+                    var $ip = $('#studentRegForm_branchSelect');
                     $.each(json, function(i, value) {
                         $('#studentRegForm_branchSelect').append('<option value=' + value.id + '>' + value.branch + '</option>');
                     });
@@ -158,10 +152,53 @@
                     $("#device_gcm_id").val(data.registrationId);
                 });
                 push.on('error', function(e) {
-                    console.log(e.message);
+                    navigator.notification.alert("GCM Error: " + e.message);
                 });
             }
+
+            $("#submitBtn").click(function(e) {
+                e.preventDefault();
+                var $form = $('#studentRegForm');
+                var storage = window.localStorage;
+                var flag = false;
+                $.ajax({
+                    url: $form.attr('action'),
+                    data: $form.serialize(),
+                    type: 'POST',
+                    success: function(response) {
+                        if (response) {
+                            var flag = true;
+                            storage.setItem('enrollment', $('#enrollment').val());
+                            storage.setItem('email', $('#email').val());
+                            storage.setItem('password', $('#password').val());
+                            storage.setItem('branch_id', $('#branch_id').val());
+                            storage.setItem('isVerified', 0);
+                            storage.setItem('device_gcm_id', $('#device_gcm_id').val());
+                            window.location.href = 'pending-verification.html';
+                        } else {
+                            navigator.notification.alert('There was some error in our servers. Try again.');
+                        }
+                    },
+                    error: function(xhr,status,error) {
+                        navigator.notification.alert('There was some error. ErrMsg: ' + error);
+                    }
+                });
+                var student_id = null;
+                if(flag) {
+                    $.ajax({
+                        url: "http://hcetnotix.azurewebsites.net/process/getStudentID/" + $('#enrollment').val(),
+                        type: "POST",
+                        success: function(json) {
+                            var data = $.parseJSON(json);
+                            student_id = data.response;
+                            storage.setItem('student_id', student_id);
+                        }
+                    });
+                }
+            });
         });
     </script>
+    <script type="text/javascript" src="js/build/plugins.min.js"></script>
+    <script type="text/javascript" src="js/build/main.min.js"></script>
 </body>
 </html>

@@ -17,7 +17,7 @@
        under the License.
  */
 
-package com.hcet.notix;
+package com.stacc.hcetnotix;
 
 import android.os.Bundle;
 import org.apache.cordova.*;

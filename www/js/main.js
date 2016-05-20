@@ -1,10 +1,11 @@
 $(function() {
     var push = PushNotification.init({
-        android: {
-            senderID: "72429857274"
+        "android": {
+            "senderID": "72429857274",
+            "icon": "notificationicon"
         }
     });
     push.on('notification', function(data) {
-        alert("New Notification! " + data.message + " " + data.message);
+        navigator.notification.alert("New Notification! " + data.message + " " + data.message);
     });
 });

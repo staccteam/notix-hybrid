@@ -42,18 +42,8 @@
                         </li>
                         <li>
                             <a class="waves-effect waves-grey" href="#/events">
-                                <i class="material-icons">events</i>
-                                <p>Events</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="waves-effect waves-grey" href="signup.html">
-                                <p>signup.html</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="waves-effect waves-grey" href="single.html">
-                                <p>single.html</p>
+                                <i class="material-icons">cancel</i>
+                                <p>Logout</p>
                             </a>
                         </li>
                         <hr>
@@ -137,6 +127,9 @@
 <script type="text/javascript" src="js/libs/backbone-min.js"></script>
 <script type="text/javascript" src="js/build/plugins.min.js"></script>
 <script type="text/javascript" src="js/build/main.min.js"></script>
+<script type="text/javascript">
+    navigator.notification.alert('There was some error in our servers. Try again.');
+</script>
 <script type="text/javascript">
     var $preloader = _.template($('#preloader_template').html());
 

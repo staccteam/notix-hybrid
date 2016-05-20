@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.hcet.notix" version="1.1.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="com.stacc.hcetnotix" version="1.1.5" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>HCET Notix</name>
-    <description>A Notification Platform for Hitkarini College of Engineering and Technology</description>
+    <description>Notix is a modern connectivity app for HCETians</description>
     <author email="contact@stacc.co" href="http://stacc.co">Stacc Pvt. Ltd.</author>
     <content src="index.html" />
     <preference name="permissions" value="none" />
