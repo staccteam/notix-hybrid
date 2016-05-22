@@ -48,7 +48,7 @@
                 dataType: "json",
                 data: credentials,
                 success: function(response) {
-                    if(response){
+                    if(response === 1){
                         loginFlag = true;
                     } else {
                         loginFlag = false;
@@ -59,7 +59,7 @@
             if (loginFlag) {
                 window.location = 'main.html';
             } else {
-                window.location = 'login.html';
+                window.location = 'namaste.html';
             }
         </script>
     </body>
