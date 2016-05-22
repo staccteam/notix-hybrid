@@ -166,7 +166,8 @@
                     data: $form.serialize(),
                     type: 'POST',
                     success: function(response) {
-                        if (response === 1) {
+                        console.log(response);
+                        if (response) {
                             var flag = true;
                             storage.setItem('enrollment', $('#enrollment').val());
                             storage.setItem('email', $('#email').val());
