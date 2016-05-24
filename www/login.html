@@ -39,7 +39,7 @@
     
         <div class="row login-screen--btns">
             <a href="signup.html" class="col s6 waves-effect waves-grey btn-flat">Signup</a>
-            <a href="#" id="submitBtn" style="border-left: 1px solid #ccc" class="col s6 waves-effect waves-grey btn-flat deep-purple-text">Login</a>
+            <a href="#" onclick="submitLoginForm();" style="border-left: 1px solid #ccc" class="col s6 waves-effect waves-grey btn-flat deep-purple-text">Login</a>
         </div>
     </div>
 
@@ -67,7 +67,7 @@
                     navigator.notification.alert("GCM Error: " + e.message);
                 });
             }
-            $('#submitBtn').click(function() {
+            function submitLoginForm() {
                 var $form = $('#loginForm');
                 $.ajax({
                     url: $form.attr('action'),
@@ -80,7 +80,7 @@
                         navigator.notification.alert('There was some error. ErrMsg: ' + error);
                     }
                 });
-            });
+            }
         });
     </script>
 </body>
