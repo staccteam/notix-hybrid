@@ -7,7 +7,7 @@
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <title>HCET Notix</title>
     </head>
-    <body>
+    <body onload="onBodyLoad()">
         <form style="display: none;" id="loginForm" action="http://hcetnotix.azurewebsites.net/auth/loginStudent" method="post">
             <div class="input-field">
                 <input id="enrollment" name="enrollment" type="text" class="validate">
@@ -26,6 +26,7 @@
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript" src="js/libs/jquery-1.12.2.min.js"></script>
+        <script type="text/javascript" src="js/libs/"></script>
         <script type="text/javascript">
         function onBodyLoad() {
             document.addEventListener("deviceready", onDeviceReady, false);
@@ -41,7 +42,7 @@
                 type: "POST",
                 data: $form.serialize(),
                 success: function(response) {
-                    if(response === 1){
+                    if(response == 1){
                         loginFlag = true;
                     } else {
                         loginFlag = false;

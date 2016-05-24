@@ -7,7 +7,7 @@
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
     <link rel="stylesheet" type="text/css" href="css/build/style.css">
 </head>
-<body class="login-screen">
+<body class="login-screen" onload="onBodyLoad()">
 
     <nav class="appbar navbar-fixed">
         <div class="nav-wrapper deep-purple">
@@ -78,11 +78,15 @@
                     data: $form.serialize(),
                     type: 'POST',
                     success: function(response) {
-                        window.location.href = 'main.html';
+                        if (response == 1) {
+                            window.location.href = 'main.html'; 
+                        } else {
+                            navigator.notification.alert('Invalid credentials, Human!');
+                        }
                     },
                     error: function(xhr,status,error) {
-                        alert('There was some error. ErrMsg: ' + error);
-                        // navigator.notification.alert('There was some error. ErrMsg: ' + error);
+                        // alert('There was some error. ErrMsg: ' + error);
+                        navigator.notification.alert('There was some error. ErrMsg: ' + error);
                     }
                 });
             });
