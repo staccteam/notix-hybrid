@@ -120,7 +120,10 @@
     <script type="text/javascript" src="js/libs/jquery-1.12.2.min.js"></script>
     <script type="text/javascript" src="js/libs/materialize.min.js"></script>
     <script type="text/javascript">
-        $(document).ready(function () {
+        function onBodyLoad() {
+            document.addEventListener("deviceready", onDeviceReady, false);
+        }
+        function onDeviceReady() {
             $('select').material_select();
             $.ajax({
                 url:'http://hcetnotix.azurewebsites.net/process/getBranches',
@@ -196,7 +199,7 @@
                     });
                 }
             });
-        });
+        }
     </script>
     <script type="text/javascript" src="js/build/plugins.min.js"></script>
     <script type="text/javascript" src="js/build/main.min.js"></script>

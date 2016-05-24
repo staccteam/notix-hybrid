@@ -49,7 +49,10 @@
     <script type="text/javascript" src="js/build/plugins.min.js"></script>
     <script type="text/javascript" src="js/build/main.min.js"></script>
     <script type="text/javascript">
-        $(function(){
+        function onBodyLoad() {
+            document.addEventListener("deviceready", onDeviceReady, false);
+        }
+        function onDeviceReady() {
             var loginFlag = false;
             document.addEventListener("deviceready", onDeviceReady, false);
             function onDeviceReady() {
@@ -83,7 +86,7 @@
                     }
                 });
             });
-        });
+        }
     </script>
 </body>
 </html>
