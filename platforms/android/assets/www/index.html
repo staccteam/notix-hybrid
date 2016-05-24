@@ -48,17 +48,18 @@
                 dataType: "json",
                 data: credentials,
                 success: function(response) {
-                    if(response === 1){
+                    if(response){
                         loginFlag = true;
                     } else {
                         loginFlag = false;
                     }
+
                 }
             });
-            if (loginFlag === true) {
+            if (loginFlag) {
                 window.location = 'main.html';
             } else {
-                window.location = 'namaste.html';
+                window.location = 'login.html';
             }
         </script>
     </body>

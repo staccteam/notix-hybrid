@@ -166,7 +166,10 @@
                     data: $form.serialize(),
                     type: 'POST',
                     success: function(response) {
+<<<<<<< HEAD
                         console.log(response);
+=======
+>>>>>>> parent of d339c78... Updated routes
                         if (response) {
                             var flag = true;
                             storage.setItem('enrollment', $('#enrollment').val());
@@ -175,7 +178,7 @@
                             storage.setItem('branch_id', $('#branch_id').val());
                             storage.setItem('isVerified', 0);
                             storage.setItem('device_gcm_id', $('#device_gcm_id').val());
-                            window.location.href = 'main.html';
+                            window.location.href = 'pending-verification.html';
                         } else {
                             navigator.notification.alert('There was some error in our servers. Try again.');
                         }
