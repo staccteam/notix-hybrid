@@ -7,7 +7,7 @@
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
     <link rel="stylesheet" type="text/css" href="css/build/style.css">
 </head>
-<body class="home-screen" onload="onBodyLoad()">
+<body class="home-screen">
     <div class="main-window"></div>
     <div class="home-screen-container"></div>
     <script type="text/javascript" src="cordova.js"></script>
@@ -69,6 +69,7 @@
         <% notifications.each(function(notification){ %>
             <div class="waves-effect" style="width: 100%; padding-top: 1rem">
                 <div class="container notification-template">
+                    <a href="#notification/single/<%= notification.get('id') %>">
                     <div class="row" style="width: 100%">
                         <div class="col s8">
                             <p class="notification-template__title"><strong><% 
@@ -81,10 +82,11 @@
                             <div class="grey-text"><%= notification.get('message').substring(0, 40) + '...' %></div>
                         </div>
                         <div class="col s4 notification-template--meta" style="text-align: right">
-                            <p class="notification-template__timestamp">Sept 21, 2015</p>
+                            <p class="notification-template__timestamp"><%= notification.get('created_at') %></p>
                             <p class="notification-template__branchtag chip">CS</p>
                         </div>
                     </div>
+                    </a>
                 </div>
             </div><hr style="margin: 0">
         <% }) %>
@@ -237,18 +239,12 @@
     // Application Router Section
     var AppRouter = Backbone.Router.extend({
         routes: {
-            "":"home",
-            "register":"register",
-            "notifications":'notifications',
+            "":"notifications",
             "notification/single/:notId":'notification'
         },
     });
 
     var router = new AppRouter();
-    router.on('route:home', function () {
-
-        router.navigate('/notifications', {trigger: true});
-    });
     router.on('route:notifications', function () {
         $('.button-collapse').click();          // Hide the Navbar
         notification.render();
