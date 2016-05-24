@@ -42,8 +42,10 @@
                 type: "POST",
                 data: $form.serialize(),
                 success: function(response) {
-                    if(response == 1){
-                        loginFlag = true;
+                    if (response !== 0) {
+                        var data = $.parseJSON (response);
+                        console.log (data[0].id);
+                        window.location.href = 'main.html'; 
                     } else {
                         loginFlag = false;
                     }

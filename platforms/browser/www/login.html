@@ -78,8 +78,10 @@
                     data: $form.serialize(),
                     type: 'POST',
                     success: function(response) {
-                        if (response == 1) {
-                            window.location.href = 'main.html'; 
+                        if (response !== 0) {
+                            var data = $.parseJSON (response);
+                            console.log (data);
+                            // window.location.href = 'main.html'; 
                         } else {
                             navigator.notification.alert('Invalid credentials, Human!');
                         }
