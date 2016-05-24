@@ -41,7 +41,7 @@
                             </a>
                         </li>
                         <li>
-                            <a class="waves-effect waves-grey" href="#/events">
+                            <a id="logoutBtn" class="waves-effect waves-grey" href="#/events">
                                 <i class="material-icons">cancel</i>
                                 <p>Logout</p>
                             </a>
@@ -142,6 +142,9 @@
         });
         push.on('notification', function(data) {
             navigator.notification.alert("New Notification! " + data.message + " " + data.message);
+        });
+        $("#logoutBtn").click(function () {
+            localStorage.clear();
         });
     }
 </script>

@@ -79,9 +79,15 @@
                     type: 'POST',
                     success: function(response) {
                         if (response !== 0) {
-                            var data = $.parseJSON (response);
-                            console.log (data);
-                            // window.location.href = 'main.html'; 
+                            var data = $.parseJSON(response);
+                            localStorage.setItem('enrollment', data[0].enrollment);
+                            localStorage.setItem('email', data[0].email);
+                            localStorage.setItem('password', $("#password").val());
+                            localStorage.setItem('branch_id', data[0].branch_id);
+                            localStorage.setItem('isVerified', data[0].isVerified);
+                            localStorage.setItem('device_gcm_id', data[0].device_gcm_id);
+                            localStorage.setItem('branch_name', data[0].branch_name);
+                            window.location.href = 'main.html'; 
                         } else {
                             navigator.notification.alert('Invalid credentials, Human!');
                         }
