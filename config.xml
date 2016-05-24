@@ -28,7 +28,7 @@
     <plugin name="org.apache.cordova.vibration" />
     <plugin name="cordova-plugin-whitelist"/>
     <preference name="android-build-tool" value="gradle" />
-    <plugin name="phonegap-plugin-push">
+    <plugin name="phonegap-plugin-push" spec="1.6.3">
         <param name="SENDER_ID" value="XXXXXXX" />
     </plugin>
     <icon src="icon.png" />
