@@ -128,7 +128,15 @@
 <script type="text/javascript" src="js/build/plugins.min.js"></script>
 <script type="text/javascript" src="js/build/main.min.js"></script>
 <script type="text/javascript">
-    navigator.notification.alert('There was some error in our servers. Try again.');
+    var push = PushNotification.init({
+        "android": {
+            "senderID": "72429857274",
+            "icon": "notificationicon"
+        }
+    });
+    push.on('notification', function(data) {
+        navigator.notification.alert("New Notification! " + data.message + " " + data.message);
+    });
 </script>
 <script type="text/javascript">
     var $preloader = _.template($('#preloader_template').html());
