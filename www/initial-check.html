@@ -29,6 +29,12 @@
         <script type="text/javascript" src="js/libs/"></script>
         <script type="text/javascript">
         function onBodyLoad() {
+            if (localStorage.getItem ('enrollment') === null) {
+                console.log ('checked');
+                window.location = 'namaste.html';
+            } else {
+                window.location = 'main.html';
+            }
             document.addEventListener("deviceready", onDeviceReady, false);
         }
         function onDeviceReady() {

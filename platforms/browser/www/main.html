@@ -41,7 +41,7 @@
                             </a>
                         </li>
                         <li>
-                            <a class="waves-effect waves-grey" href="#/events">
+                            <a id="logoutBtn" class="waves-effect waves-grey" href="#/events">
                                 <i class="material-icons">cancel</i>
                                 <p>Logout</p>
                             </a>
@@ -83,7 +83,7 @@
                         </div>
                         <div class="col s4 notification-template--meta" style="text-align: right">
                             <p class="notification-template__timestamp"><%= notification.get('created_at') %></p>
-                            <p class="notification-template__branchtag chip">CS</p>
+                            <p class="notification-template__branchtag chip"><%= branch_name %></p>
                         </div>
                     </div>
                     </a>
@@ -143,6 +143,9 @@
         push.on('notification', function(data) {
             navigator.notification.alert("New Notification! " + data.message + " " + data.message);
         });
+        $("#logoutBtn").click(function () {
+            localStorage.clear();
+        });
     }
 </script>
 <script type="text/javascript">
@@ -191,11 +194,16 @@
                 this.$el.html($preloader);          // Preloader
                 that = this;
                 var notifications = new NotificationModel();
-                notifications.url = "process/getNotifications/json";
+                var $branch_name = localStorage.getItem("branch_name");
+                if ($branch_name !== null)
+                    notifications.url = "process/getNotifications/json/" + $branch_name;
+                else
+                    notifications.url = "process/getNotifications/json";
+
                 notifications.fetch({
                     success: function (data) {
                         console.log(data);
-                        var variables = {notifications: data};
+                        var variables = {notifications: data, branch_name: $branch_name};
                         var template = _.template ($ ('#notification_template').html());
                         that.$el.html(template (variables));
                     }
