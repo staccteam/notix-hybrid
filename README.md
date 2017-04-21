@@ -13,7 +13,6 @@ phonegap serve
 ```
 Install [**Ripple Emulator**](http://chrome.google.com/webstore/detail/ripple-emulator-beta/geelfhphabnejjhdalkjhgipohgpdnoc), a Chrome extension, to emulate the Phonegap's served view in a phone mock-up. Alternatively, [download the official Phonegap Developer app](http://play.google.com/store/apps/details?id=com.adobe.phonegap.app) to run the app on actual Android device.
 
-<br>
 **Project by**  
 Stacc (P) Ltd.  
 Jabalpur, IN  
